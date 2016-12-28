@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Needleinthehaystack}
+\pmcreated{2013-03-22 16:07:34}
+\pmmodified{2013-03-22 16:07:34}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{needle-in-the-haystack}
+\pmrecord{10}{38196}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A35}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+A common problem in mathematics is to prove the existence and uniqueness of a solution, element, object in a category, etc.  The typical approach for such a proof is to establish the existence of the solution, then determine the uniqueness.  In instances like this, uniqueness is often proved by assuming there are two solutions and concluding they are indeed equal.
+
+\textbf{Needle-in-a-haystack Heuristic}
+
+An alternative and often more constructive approach is to prove uniqueness first, then prove existence -- we call this the \emph{needle-in-the-haystack} heuristic because it is much easier to find a needle in a haystack when you first prove you know where it will be if it is there at all.\footnote{This terminology is due to F. R. Beyl}
+
+We give a basic example from elementary mathematics.
+
+\begin{prop}
+Two distinct non-parallel lines in a the $xy$-plane intersect at exactly one point.
+\end{prop}
+We pause to observe this is an existence and uniqueness question: a point of intersection must exist, and it must be unique.  Because we care only about 
+illustrating the heuristic we assume our meaning of lines excludes vertical
+lines, so each line is given by a function of the form $y=mx+b$.
+\begin{proof}
+Let $y_1=m_1 x+b_1$ and $y_2=m_2 x+b_2$ be distinct lines which are non-parallel; hence, $m_1\neq m_2$.  If 
+$y_1=y_2$ for some $x$ then $m_1 x+b_1=m_2 x+b_2$ so $(m_1-m_2)x=b_2-b_1$.
+This leads to $\displaystyle x=\frac{b_2-b_1}{m_1-m_2}$.
+Thus we have uniquely characterized any intersection point as the point 
+$\displaystyle (x,y_1(x))$, with $\displaystyle x=\frac{b_2-b_1}{m_1-m_2}$,
+if an intersection exists.
+
+To see that an intersection exists we appeal to the unique characterization.
+\[y_1\left(\frac{b_2-b_1}{m_1-m_2}\right)=m_1\frac{b_2-b_1}{m_1-m_2}+b_1
+ =\frac{m_1 b_2-m_2 b_1}{m_1-m_2}
+=m_2\frac{b_2-b_1}{m_1-m_2}+b_2
+=y_2\left(\frac{b_2-b_1}{m_1-m_2}\right)
+.\]
+\end{proof}
+
+\begin{remark}
+After establishing a unique characterization of a solution it is often so convincing as to leave no need for the verification of the solution, so the existence stage of the proof may be omitted.  [Indeed, a standard pre-calculus course would not hesitate to stop the proof at end of the uniqueness stage.]
+\end{remark}
+
+If we chose to write the theorem in the traditional manner and introduce the existence first, then we would have begun with a rather unpredictable beginning:
+\begin{quote}
+Let $\displaystyle x=\frac{b_2-b_1}{m_1-m_2}$.
+\end{quote}
+Such an approach is no less logical but can leave a reader confused as to the reason these choices are being made. 
+
+Furthermore, to prove the uniqueness of a solution by means of assuming there are two solutions can be a misleading approach for some problems.  For example, the intersection of $f(x)=x^2-8x$ with $g(x)=-3x-4$ is unique, but given two solutions $(x_1,y_1)$, $(x_2,y_2)$, it becomes rather difficult to conclude $(x_1,y_1)=(x_2,y_2)$ directly.  With the needle-in-the-haystack heuristic one begins the proof by showing the only solution is $(4,-16)$, if there is a solution.  Thus we never compare two systems of equations in several variables.
+
+\textbf{When to use the heuristic}
+
+When an existence and uniqueness is claimed where there are accompanying equations or structures that must be satisfied by the solution, it is often possible to apply the heuristic.  Often such problems can be worded as two sets intersecting at a single point.  If the possible point of intersection is characterized before we know the intersection is non-empty, then we have an immediate candidate with which we may prove the intersection is non-empty.
+
+\textbf{When not to use the heuristic}
+
+There are, however, many examples where the traditional approach of establishing existence first is preferable.  For instance, in a proof that every integer has a unique factorization, establishing some factorization exists is nearly trivial: choose a prime $p$ which divides $n$, then by induction choose a prime factorization $q_1\cdots q_s$ of $n/p$, and then $n=p q_1\cdots q_s$ is a prime factorization of $n$.  However, establishing the uniqueness of a prime factorization is a far more delicate matter.
+
+The heuristic applies best when the definition of the solution, element, or object in question is not immediately presentable from the definition.  When a definition provides a blue-print for establishing existence then the traditional method may be preferable.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Interest}
+\pmcreated{2013-03-22 16:39:51}
+\pmmodified{2013-03-22 16:39:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{interest}
+\pmrecord{6}{38870}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A69}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{91B28}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+This entry mostly concerns the mathematical aspects of interest.  Also, we assume that the value of a unit amount of money does not change with time (so there is no consideration regarding inflation, etc...)
+
+Let's first look at two common examples in real life:
+\begin{enumerate}
+\item An individual deposits a certain amount of money into an entity (a bank, for example) for a period of time, interest is accrued at the end of the time period payable to the individual by the entity.
+\item One borrows a certain amount of money from an entity (a loan company, for example) for a period of time, interest is accrued at the end of the time period payable to the entity by the borrower.
+\end{enumerate}
+
+In both examples, two parties, or \emph{entities} are involved.  Let's call one the lender $L$ and the other the borrower $B$.  Between $L$ and $B$, there is an initial \emph{transaction} where a certain amount of money $M$, called the \emph{principal}, is transferred from one to another.  $M$ can be seen as a function of $L$ and $B$: $M=M(L,B)$ and has the property that $M(L,B)+M(B,L)=0$.  This property basically says that $B$ borrowing $M$ from $L$ is equivalent to $L$ borrowing $-M$ from $B$.  Let us agree that $M(L,B)\ge 0$.
+
+At a later time $t$, an \emph{interest} is accrued.  Put it another way, $M$ has ``grown'' to $M(t)$.  Set the initial transaction at time $0$, then $M=M(0)$.  From this point of view, \emph{interest} $i$, is the ``additional'' amount of money earned, or accrued, between $0$ and $t$, or $i=M(t)-M(0)$.  If we want to emphasize $L$ and $B$ as the additional variables, then the definition, fully stated, becomes
+$$i(L,B,t):=M(L,B,t)-M(L,B,0).$$
+We can calculate interest between any two time periods.  For example, if we know $i(L,B,t)$ and $i(L,B,s)$, then the interest earned from $t$ to $s$ is simply the difference of the two: $$i(L,B,t,s):=i(L,B,s)-i(L,B,t)=M(L,B,s)-M(L,B,t).$$
+Keep in mind is that in this definition, only one transaction has taken place: the initial one at $0$ (we assume that at time $t$, an interest has been merely been accrued but no actual transfer of money is taking place).  Interests resulting from additional transactions that happened between $0$ and $t$ need to be evaluated separately.
+
+The last paragraph merely says that $i$ is additive with respect to \emph{transactions}: if $L_1$ loans $M_1$ to $B_1$ at $t_1$, and $L_2$ loans $M_2$ to $B_2$ at $t_2$, then the \emph{total} interest earned by the lenders from the borrowers at time $t$ is $$i(L,B,t)= i_1(L_1,B_1,t)+ i_2(L_2,B_2,t),$$
+where $L$ is $L_1$ and $L_2$ considered as a single lending entity, and $B$ is $B_1$ and $B_2$ considered as a single borrowing entity.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item
+Note that $t$ does not always have to be positive.  It is possible that we are interested in finding what $i$ is at time $t\le 0$.  For example, one may want to know the amount of interest lost had he saved his money in a bank and earned interest 30 years earlier, well before his current retirement age.
+\item
+Another point worth stressing is that the defintion only works if we stick to the same units.  If $M$ is expressed as U.S. Dollars, then that needs to be the unit of choice for money throughout.  Any other denominations or currencies need to be converted.  The same goes with time $t$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{sk} S. G. Kellison, {\em Theory of Interest}, McGraw-Hill/Irwin, 2nd Edition, (1991).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

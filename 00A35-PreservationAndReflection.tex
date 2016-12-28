@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PreservationAndReflection}
+\pmcreated{2013-03-22 17:12:18}
+\pmmodified{2013-03-22 17:12:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{preservation and reflection}
+\pmrecord{5}{39525}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A35}
+\pmdefines{preserve}
+\pmdefines{reflect}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In mathematics, the word ``preserve'' usually means the ``preservation of properties''.  Loosely speaking, whenever a mathematical construct $A$ has some property $P$, after $A$ is somehow ``transformed'' into $A'$, the transformed object $A'$ also has property $P$.  The constructs usually refer to sets and the transformations typically are functions or something similar.
+
+Here is a simple example, let $f$ be a function from a set $A$ to $B$.  Let $A$ be a finite set.  Let $P$ be the property of a set being finite.  Then $f$ preserves $P$, since $f(A)$ is finite.  Note that we are not saying that $B$ is finite.  We are merely saying that the portion of $B$ that is the \emph{image} of $A$ (the transformed portion) is finite.
+
+Here is another example.  The property of being connected in a topological space is preserved under a continuous function.  Here, the constructs are topological spaces, and the transformation is a continuous function.  In other words, if $f:X\to Y$ is a continuous function from $X$ to $Y$.  If $X$ is connected, so is $f(X)\subseteq Y$.
+
+Many more examples can be found in abstract algebra.  Group homomorphisms, for example, preserve commutativity, as well as the property of being finitely generated.
+
+The word ``reflect'' is the dual notion of ``preserve''.  It means that if the transformed object has property $P$, then the original object also has property $P$.  This usage is rarely found outside of category theory, and is almost exclusively reserved for functors.  For example, a faithful functor reflects isomorphism: if $F$ is a faithful functor from $\mathcal{C}$ to $\mathcal{D}$, and the object $F(A)$ is isomorphic to the object $F(B)$ in $\mathcal{D}$, then $A$ is isomorphic to $B$ in $\mathcal{C}$.
+%%%%%
+%%%%%
+\end{document}

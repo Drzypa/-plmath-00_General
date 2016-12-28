@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProbabilisticProof}
+\pmcreated{2013-03-22 15:53:44}
+\pmmodified{2013-03-22 15:53:44}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{probabilistic proof}
+\pmrecord{9}{37897}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A35}
+%\pmkeywords{model theory}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+\usepackage{enumerate}
+
+
+
+
+\begin{document}
+Most exciting results in mathematics make use of standard proofs; however, some emerging mathematics is making use of proofs nearly as exciting as the results.  One of these methods in the Probabilistic method.  The following is an outline of how such a proof might proceed.
+
+\emph{Theorem structure:}\\
+Let $X$ be a finite family of objects.  We wish to show every element of $X$ has some property $T$.
+
+\emph{Proof scheme:}
+\begin{enumerate}[(i)]
+\item Show that the probability that an object $A$ in $X$ has the property $T$ is $1-\varepsilon$ for some $0\leq \varepsilon\leq 1$.
+\item Suppose $A\in X$ is some object without property $T$.  Use $A$ to construct 
+more than $\varepsilon|X|$ other objects in $X$ also without property $T$.
+\item Conclude that if an object $A\in X$ does not have property $T$ then the probablity that a random element of $X$ has property $T$ is less than $1-\varepsilon$ thus creating a contradiction.  So every element in $X$ has property $T$.
+\end{enumerate}
+
+(See Examples of probabilistic proofs.)
+
+The surprising discovery is that in some problems it is possible to show both (i) and (ii) thus establishing the contradiction in (iii).  One would typically expect that to demonstrate the probablity is $1-\epsilon$ would necesitate knowing that there are no more than $\epsilon$ counterexamples, but this is not always the case.
+
+Proofs of this flavor appear in graph theory because of a wealth of knowledge about random graphs and random walks etc.  (Example, the work of Alon on $H$-universal graphs.)  Establishing the necessary probabilities is therefore  possible without carefully enumerating the elements in $X$.  Then beginning with a possible counterexample, combinatorial changes are made to the candidate to create too many counterexamples.
+
+A second technique applies to the mathematics of logic, more explicitly model theory.  Recent work by Marcus du Sautoy treats problems on counting the number of $p$-groups through model theory.
+
+Both proof techniques are highly non-constructive and can leave a reader wondering if they trust the result, but each is as foundational as a proof by induction.
+%%%%%
+%%%%%
+\end{document}

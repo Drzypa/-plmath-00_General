@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SaddlePointApproximation}
+\pmcreated{2013-03-22 13:38:07}
+\pmmodified{2013-03-22 13:38:07}
+\pmowner{msihl}{2134}
+\pmmodifier{msihl}{2134}
+\pmtitle{saddle point approximation}
+\pmrecord{5}{34284}
+\pmprivacy{1}
+\pmauthor{msihl}{2134}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{00A79}
+\pmsynonym{stationary phase method}{SaddlePointApproximation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The saddle point approximation (SPA), a.k.a. stationary phase approximation, is a widely used method in quantum field theory (QFT) and related fields. 
+Suppose we want to evaluate the following integral in the limit $\zeta \rightarrow \infty$:
+\begin{equation}\label{eq:integral}
+{\mathcal I} = \lim_{\zeta \rightarrow \infty} \int_{-\infty}^{\infty} {\mbox d}x
+\; {\mbox e}^{- \zeta f(x)}.
+\end{equation}
+The saddle point approximation can be applied if the function $f(x)$ satisfies certain conditions. Assume that $f(x)$ has a global minimum $f(x_0)=y_{min}$ at $x=x_0$, which is sufficiently separated from other local minima and whose value is sufficiently smaller than the value of those.
+Consider the Taylor expansion of $f(x)$ about the point $x_0$:
+\begin{equation}\label{eq:taylor}
+f(x) = f(x_0) + \partial_x f(x){\Big |}_{x=x_0}(x-x_0) + \frac{1}{2} {\partial_x}^2 f(x){\Big |}_{x=x_0}(x-x_0)^2 + O(x^3).
+\end{equation}
+Since $f(x_0)$ is a (global) minimum, it is clear that $f'(x_0)=0$. Therefore $f(x)$ may be approximated to quadratic order as 
+\begin{equation}
+f(x) \approx f(x_0) + \frac{1}{2} f''(x_0) (x-x_0)^2.
+\end{equation}
+The above assumptions on the minima of $f(x)$ ensure that the dominant contribution to (\ref{eq:integral}) in the limit $\zeta \rightarrow \infty$ will 
+come from the region of integration around $x_0$:
+\begin{align}\label{eq:second}
+{\mathcal I} &\approx \lim_{\zeta \rightarrow \infty} {\mbox e}^{-\zeta f(x_0)} \int_{-\infty}^{\infty} {\mbox d}x \; {\mbox e}^{-\frac{\zeta}{2} f''(x_0)(x-x_0)^2} \\ \nonumber
+&\approx \lim_{\zeta \rightarrow \infty} {\mbox e}^{-\zeta f(x_0)} \left( \frac{2 \pi}{\zeta f''(x_0)}\right)^{1/2}.
+\end{align}
+In the last step we have performed the Gau{\ss}ian integral. 
+The next nonvanishing higher order correction to (\ref{eq:second}) stems from the quartic term of the expansion (\ref{eq:taylor}). This correction may be incorporated into (\ref{eq:second}) to yield (after expanding part of the exponential):
+\begin{equation}
+{\mathcal I} \approx \lim_{\zeta \rightarrow \infty} {\mbox e}^{-\zeta f(x_0)} \int_{-\infty}^{\infty} {\mbox d}x \; {\mbox e}^{-\frac{\zeta}{2} f''(x_0)(x-x_0)^2} \left( 1 - \frac{\zeta}{4!} (\partial_x^4 f(x))|_{x=x_0}(x-x_0)^4 \right).
+\end{equation}
+...to be continued with applications to physics...
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Supercomputers}
+\pmcreated{2013-03-22 18:44:14}
+\pmmodified{2013-03-22 18:44:14}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{supercomputers}
+\pmrecord{50}{41509}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{97U70}
+%\pmkeywords{supercomputers}
+%\pmkeywords{UNIX}
+%\pmkeywords{Linux}
+%\pmkeywords{computer}
+%\pmkeywords{petaflops}
+%\pmkeywords{automata}
+%\pmkeywords{UTM}
+%\pmkeywords{sequential machine}
+%\pmkeywords{parallel programming}
+%\pmkeywords{supercomputer architecture}
+\pmrelated{Automaton}
+\pmrelated{QuantumAutomataAndQuantumComputation2}
+\pmrelated{SystemDefinitions}
+\pmrelated{ArtificialInteglligence}
+\pmrelated{AbstractRelationalBiology}
+\pmrelated{IndexOfCategories}
+\pmdefines{supercomputer}
+\pmdefines{computer}
+\pmdefines{petaflops/s}
+\pmdefines{sequential machine}
+\pmdefines{UTM}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\section{Supercomputers}
+
+ The usual description of a \emph{supercomputer} is as one of the most advanced computers in terms of execution, or processing speed (particularly speed of calculation), as well as permanent storage capacity that can be rapidly accessed in `real' time. Supercomputer operating systems are often variants of UNIX or the popular Linux. The base language of supercomputer code is often $C$, and sometimes $Fortran$, also using special libraries to share data between computing nodes or `cores'. Some websites currently restrict this description of a supercomputer to mainframe ones, by `defining' a supercomputer as: ``a mainframe computer that is among the largest, fastest, or most powerful of those available at a given time''. For example, the Los Alamos system, nicknamed the IBM's `Roadrunner' (a cluster of 3240 computers, each with 40 processing cores) may be a challenge for the Cray XT5 supercomputer at Oak Ridge National Laboratory called the `Jaguar'. The former system, only the second one to break the petaflop/s barrier, has a top performance of 1.059 petaflop/s in running the Linpack benchmark application, with a  petaflop/s representing one quadrillion floating point operations per second. 
+
+  Thus, a \emph{supercomputer} can be currently, and narrowly, described in practice as any computer capable of one quadrillion floating point operations per second when running the Linpack benchmark application. Obviously, this is a somewhat arbitrary choice, but is sufficient as a practical example of a present day supercomputer. 
+
+ Any \emph{computer}, including the \emph{supercomputer}, can be however defined in general as a sixtuple $[(A),\pi]$ where $(A)$ is a quintuple automaton (or sequential machine) which is capable of making calculations, usually by executing a set of logical, sequential instructions or (software) program(s) $\pi$ that can be all defined recursively. Let us recall here also that an automaton, $A$, is a five-tuple $(S,\Sigma,\delta,I,F)$, consisting of:
+\begin{enumerate}
+\item
+a non-empty set $S$ of (sequential machine) states,
+\item
+a non-empty set $\Sigma$ of symbols; a pair $(s,\alpha)$ of a state $s\in S$ and a symbol $\alpha \in\Sigma$ is called a \emph{configuration},
+\item
+a rule $\delta$ associating every configuration $(s,\alpha)$ a subset $\delta(s,\alpha)\subseteq S$ of states; $\delta$ is called a \emph{next-state relation}, or a \emph{transition relation},
+\item
+a non-empty set $I\subseteq S$ of \emph{starting states}, and
+\item
+a set $F\subseteq S$ of \emph{final states} or \emph{terminating states}.
+\end{enumerate}
+
+\textbf{Remark:}
+  
+ A supercomputer architecture --such as, currently, a cluster of MIMD multiprocessors, each processor of which is a SIMD-- can be thus regarded as a concrete realization of an automata supercategory of first order $\S_1$. 
+ 
+  A supercomputer is capable of running many programs in parallel, and at extremely high speeds for most programs. Thus, any computer and supercomputer can be at least in principle simulated by an \emph{Universal Turing Machine} (UTM). Quite remarkably, the UTM cannot do this for the thinking human brain, and thus the human brain cannot be
+adequately described as `one <giant> supercomputer'.
+ 
+ There are also however some dissenting contenders who claim that  
+\PMlinkexternal{personal supercomputing}{http://www.nvidia.com/object/personal_supercomputing.html}
+is also possible, and that such personal supercomputers are also becoming available, which are not mainframes in the established sense of the word, (see for example: \PMlinkexternal{`TOP500 Supercomputing Sites'}{http://www.top500.org/}). However, the top computing speed of such `personal supercomputers' which are parallel processing machines is in the range of only 4 teraflop/s, still some 250 times faster than the fastest PCs. 
+Thus, one notes that an inexpensive model quad-core Xeon workstation running at 2.66 GHz will outperform a multimillion dollar Cray C90 supercomputer that was used in the early 1990's much for the same tasks. 
+
+ Whereas many `pure' mathematicians or theoretical physicists may claim that 
+they do not need any supercomputer, this is not the case of the majority of applied mathematicians, computer scientists, mathematical and/or experimental physicists and engineers who find increasinly the need for having access to a supercomputer: the faster the device, and the more accessible it is, the better the supercomputer is--one petaflop today, and hopefully one thousand petaflops tomorrow, with petabyte storage capability that's not too slow to access.
+
+ Unclassified supercomputing is currently used ``for highly calculation-intensive tasks such as problems involving quantum physics'' (QCD, QED, QFT, AQFT), molecular dynamics and modeling/computing structures and properties of small 
+molecules, polymers, biopolymers/biological macromolecules (or even crystal lattices), physical simulations of all kinds
+including fluid dynamics and aerodynamic testing, `long-term' weather forecasting and climate research,  theoretical nuclear fusion research, cryptographic analysis, and lots more. Supercomputers are increasingly utilized at all major universities and scientific research laboratories for both academic and industrial purposes.
+One also remembers that parallel processing was the key in the race for assembling the first human genome
+map in two parallel projects that topped a billion dollars over a five year period; today, the cost of a single human `whole' genome analysis has dropped by a factor of one million, and the analysis time has been reduced to one day.  
+
+%%%%%
+%%%%%
+\end{document}

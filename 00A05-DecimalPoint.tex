@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecimalPoint}
+\pmcreated{2013-03-22 17:23:33}
+\pmmodified{2013-03-22 17:23:33}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{decimal point}
+\pmrecord{7}{39760}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em decimal point} is a symbol separating those digits representing integer powers of a base (usually base 10) on the left, and those representing fractional powers of a base (the base raised to a negative number) on the right. For example, in $\pi \approx 3.14$, the 3 to the left of the decimal point corresponds to $3 \times 10^0$, while the 1 to the right of the decimal point corresponds to $1 \times 10^{-1}$.
+
+Most scientific calculators capable of displaying binary, octal and hexadecimal limit numbers in those bases to integers, making moot the issue of what to call the decimal point in those bases.
+
+The decimal point is generally omitted for integers. However, Mathematica will use the decimal point at the end of an integer to indicate the value has been computed using floating-point arithmetic and loss of precision is possible. For example, \verb=(1/2)^(-1)= gives ``2'' as an answer but \verb=.5^(-1)= gives ``2.'' for the answer. Even more pointedly, \verb=1 + 1= gives ``2'' as the answer but \verb=1. + 1.= gives ``2.'' as the answer.
+
+In the United States, the decimal point is usually aligned with the bottom of the digit glyphs, while in the United Kingdom it is usually centered (and is distinguished from the central dot multiplication operator purely on spacing). In Europe, a comma is used instead, so our example would be written $\pi \approx 3,\!14$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Welldefined}
+\pmcreated{2013-03-22 17:31:32}
+\pmmodified{2013-03-22 17:31:32}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{well-defined}
+\pmrecord{9}{39921}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmsynonym{well defined}{Welldefined}
+\pmrelated{function}
+\pmrelated{WellDefinednessOfProductOfFinitelyGeneratedIdeals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A mathematical concept is \emph{well-defined} (German {\em wohldefiniert}, French {\em bien d\'efini}), if its contents is 
+\PMlinkescapetext{independent} on the form or the alternative representative which is used for defining it.  
+
+For example, in defining the \PMlinkname{power}{FractionPower} $x^r$ with $x$ a positive real and $r$ a rational number, 
+we can freely choose the fraction form $\frac{m}{n}$ ($m\in\mathbb{Z}$,\, $n\in\mathbb{Z}_+$) of $r$ and take 
+$$x^r \;:=\; \sqrt[n]{x^m}$$ 
+and be sure that the value of $x^r$ does not depend on that choice (this is justified in the entry fraction power).  So, 
+the $x^r$ is well-defined.
+
+In many instances well-defined is a synonym for the formal definition of a function between sets.  For example, 
+the function\, $f(x) := x^2$\, is a well-defined function from the real numbers to the real numbers because
+every input, $x$, is assigned to precisely one output, $x^2$.  However,\, $f(x) := \pm\sqrt{x}$\, is not well-defined
+in that one input $x$ can be assigned any one of two possible outputs, $\sqrt{x}$ or $-\sqrt{x}$.
+
+More subtle examples include expressions such as
+\begin{equation*}
+   f\!\left(\frac{a}{b}\right) \;:=\; a\!+\!b,\quad \frac{a}{b}\in\mathbb{Q}.
+\end{equation*}
+Certainly every input has an output, for instance,\, $f(1/2) = 3$.  However, the expression is \emph{not}
+well-defined since\, $1/2 = 2/4$\, yet\, $f(1/2) = 3$\, while\, $f(2/4) = 6$\, and\, $3 \neq 6$.
+
+One must question whether a function is well-defined whenever it is defined on a domain of equivalence classes 
+in such a manner that each output is determined for a representative of each equivalence class.  For example, the
+function\, $f(a/b) := a\!+\!b$\, was defined using the representative $a/b$ of the equivalence class of fractions
+equivalent to $a/b$.
+%%%%%
+%%%%%
+\end{document}

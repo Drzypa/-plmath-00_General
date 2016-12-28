@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WLOG}
+\pmcreated{2013-03-22 12:40:17}
+\pmmodified{2013-03-22 12:40:17}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{WLOG}
+\pmrecord{6}{32946}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+\pmsynonym{WOLOG}{WLOG}
+\pmsynonym{without loss of generality}{WLOG}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+``WLOG'' (or ``WOLOG'') is an acronym which stands for ``without loss of generality.''
+
+WLOG is invoked in situations where some property of a model or system is invariant under the particular choice of instance attributes, but for the sake of demonstration, these attributes must be fixed.
+
+For example, we might want to prove something about open intervals $(a, b)$ of the real number line.  But the proof might become too tedious if $a$ and $b$ were arbitrary real numbers, so in the proof we simply assume that $a = 0$ and $b = 1$, and \emph{without loss of generality}, the same arguments apply to general intervals $(a, b)$.  Depending on the proof, the loss of generality might be accomplished by translating and scaling the interval to $(0,1)$ \emph{before} carrying out the argument, and then translating and rescaling back to $(a, b)$
+afterwards.
+
+WLOG can also be invoked to shorten proofs where there are a number of choices of configuration, but the proof is ``the same'' for each of them.  We need only walk through the proof for one of these configurations, and ``WLOG'' serves as a note that we haven't weakened the argument.  For example, the proof of the fundamental theorem of arithmetic uses this notion, in essence settling on a ``canonical form'' for prime factorizations to simplify the argument.
+
+For more examples, see \PMlinkexternal{approximate index of PM entries invoking WLOG}{http://planetmath.org/?op=search\&term=WLOG+without+loss+generality}.
+%%%%%
+%%%%%
+\end{document}

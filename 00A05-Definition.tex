@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Definition}
+\pmcreated{2013-03-22 17:32:19}
+\pmmodified{2013-03-22 17:32:19}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{definition}
+\pmrecord{18}{39936}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmsynonym{mathematical description}{Definition}
+\pmsynonym{meta-construct}{Definition}
+%\pmkeywords{mathematical foundations and logics roles in defining mathematical concepts}
+\pmrelated{SetTheory}
+\pmrelated{CategoryTheory}
+\pmrelated{Topos}
+\pmrelated{AxiomOfChoice}
+\pmdefines{mathematical definition}
+
+% this is the default PlanetMath preamble.  as your 
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em definition} of a mathematical term is a meta-mathematical construct or statement that specifies as precisely as possible the meaning of that term. For example, a definition of ``sphenic number'' is ``a composite integer with three distinct prime factors.'' A mathematical concept is well-defined if its content can be formulated independently of the form or the alternative representative which is used for defining it. Furthermore, one should distinguish between mathematical definitions and mathematical descriptions of a real system; mathematical definitions express completely and meaningfully a mathematical concept in terms of other, related mathematical concepts that have been already defined, and also primary or primitive concepts that can no longer be defined in terms of other mathematical concepts and logical operands. For example, the primitive concept of `collection of elements or members' or ensemble, has no explicit definition even though it is employed to mathematically define the concept of set. A definition of a fundamental concept, such as set, category, topos, topology, homology etc., also contains several axioms, or basic assumptions/conditions imposed on the auxilliary concepts employed by such a fundamental concept definition. For example, the category of sheaves on a site is called a (Grothendieck) topos; however, a topos can also be defined directly by specifying only a few (Grothendieck topos) axioms.
+
+ Therefore, ultimately, a mathematical definition depends on the choice of the mathematical foundation selected, e.g., set-theoretical, category-theoretical, or topos-theoretical, as well as the type of logic adopted, e.g., Boolean, intuitionistic or many-valued logic. Thus, the general definition of a mathematical definition is not simply a mathematical concept, but it is instead a {\em meta-mathematical construct}, or the $<construct>$ of a construct. In the case of topos-theoretical foundations the Brouwer-intuitionistic logic is explicitly assumed in the construction/definition of the topos. As an example, the category of sets--subject to certain axioms, including the axiom of choice-- may be considered a canonical example of a Boolean topos, but it is not the only one possible, as different axioms may be selected to avoid several known antimonies in set theory. 
+ 
+ Thus, a mathematical concept is well-defined only when its mathematical foundation framework is also specified either explicitly or by its context. For reasons related to apparent `simplicity', many a mathematician prefers only Boolean logic and a set-theoretical foundation for definitions, in spite of severe limitations, known inherent paradoxes and incompleteness.
+
+ Alternative definitions of the same concept often offer additional insights into the meaning(s) of the concept being defined, as well as added flexibility in solving problems and discovering proofs.
+
+A definition of a constant is an equation with a symbol (or some other notation) on the left and either an exact value or a formula for a value on the right. For example, the definition of the golden ratio is $$\phi = \frac{1 + \sqrt{5}}{2}.$$
+
+A definition of a function is an equation, usually with function notation on the left (a symbol, with an argument or a list of arguments in parentheses) and on the right a formula using the arguments to calculate the value of the function for those arguments. Optionally, the equation could be accompanied by statements of what acceptable arguments are. For example, Euler's totient function is defined as $$\phi (n) = n \prod_{p|n} \left( 1- \frac{1}{p} \right)$$ for $n \in \mathbb{Z}$. To give one more example: the factorial function is defined as $$n! = \prod_{i = 1}^n i$$ for $0 < n \in \mathbb{Z}$. Euler's gamma function $\Gamma(x)$ is sometimes said to extend the definition of factorials to any $x \in \mathbb{C}$.
+
+%%%%%
+%%%%%
+\end{document}

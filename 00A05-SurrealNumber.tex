@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SurrealNumber}
+\pmcreated{2013-03-22 12:58:49}
+\pmmodified{2013-03-22 12:58:49}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{surreal number}
+\pmrecord{9}{33352}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmdefines{omnific integers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+The surreal numbers are a generalization of the reals.  Each surreal number consists of two parts (called the left and right), each of which is a set of surreal numbers.  For any surreal number $N$, these parts can be called $N_L$ and $N_R$.  (This could be viewed as an ordered pair of sets, however the surreal numbers were intended to be a basis for mathematics, not something to be embedded in set theory.)  A surreal number is written $N=\langle N_L\mid N_R\rangle$.
+
+Not every number of this form is a surreal number.  The surreal numbers satisfy two additional properties.  First, if $x\in N_R$ and $y\in N_L$ then $x\nleq y$.  Secondly, they must be well founded.  These properties are both satisfied by the following construction of the surreal numbers and the $\leq$ relation by mutual induction:
+
+$\langle\mid\rangle$, which has both left and right parts empty, is $0$.
+
+Given two (possibly empty) sets of surreal numbers $R$ and $L$ such that for any $x\in R$ and $y\in L$, $x\nleq y$, $\langle L\mid R\rangle$.
+
+Define $N\leq M$ if there is no $x\in N_L$ such that $M\leq x$ and no $y\in M_R$ such that $y\leq N$.
+
+This process can be continued transfinitely, to define infinite and infinitesimal numbers.  For instance if $\mathbb{Z}$ is the set of integers then $\omega=\langle \mathbb{Z}\mid \rangle$.  Note that this does not make equality the same as identity: $\langle 1\mid 1\rangle=\langle \mid\rangle$, for instance.
+
+It can be shown that $N$ is ``sandwiched'' between the elements of $N_L$ and $N_R$: it is larger than any element of $N_L$ and smaller than any element of $N_R$.
+
+Addition of surreal numbers is defined by 
+
+$$N+M=\langle \{N+x\mid x\in M_L\}\cup\{M+x\mid y\in N_L\}\mid \{N+x\mid x\in M_R\}\cup\{M+x\mid y\in N_R\}\rangle$$
+
+It follows that $-N=\langle -N_R\mid -N_L\rangle$.
+
+The definition of multiplication can be written more easily by defining $M\cdot  N_L=\{M\cdot x\mid x\in N_L\}$ and similarly for $N_R$.
+
+Then
+
+\begin{align*}
+N\cdot M=&\langle M\cdot N_L+N\cdot M_L-N_L\cdot M_L,M\cdot N_R+N\cdot M_R-N_R\cdot M_R\mid \\
+&M\cdot N_L+N\cdot M_R-N_L\cdot M_R,M\cdot N_R+N\cdot M_L-N_R\cdot M_L\rangle
+\end{align*}
+
+The surreal numbers satisfy the axioms for a field under addition and multiplication (whether they really are a field is complicated by the fact that they are too large to be a set).
+
+The integers of surreal mathematics are called the \emph{omnific integers}.  In general positive integers $n$ can always be written $\langle n-1\mid\rangle$ and so $-n=\langle \mid 1-n\rangle=\langle \mid (-n)+1\rangle$.  So for instance $1=\langle 0\mid\rangle$.
+
+In general, $\langle a\mid b\rangle$ is the simplest number between $a$ and $b$.  This can be easily used to define the dyadic fractions: for any integer $a$, $a+\frac{1}{2}=\langle a\mid a+1\rangle$.  Then $\frac{1}{2}=\langle 0\mid 1\rangle$, $\frac{1}{4}=\langle 0\mid \frac{1}{2}\rangle$, and so on.  This can then be used to locate non-dyadic fractions by pinning them between a left part which gets infinitely close from below and a right part which gets infinitely close from above.
+
+Ordinal arithmetic can be defined starting with $\omega$ as defined above and adding numbers such as $\langle \omega\mid\rangle=\omega+1$ and so on.  Similarly, a starting infinitesimal can be found as $\langle 0\mid 1,\frac{1}{2},\frac{1}{4}\ldots\rangle=\frac{1}{\omega}$, and again more can be developed from there.
+%%%%%
+%%%%%
+\end{document}

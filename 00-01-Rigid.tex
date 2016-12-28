@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Rigid}
+\pmcreated{2013-03-22 14:38:10}
+\pmmodified{2013-03-22 14:38:10}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{rigid}
+\pmrecord{11}{36219}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00-01}
+\pmsynonym{rigidity result}{Rigid}
+\pmsynonym{rigidity theorem}{Rigid}
+\pmsynonym{rigidity}{Rigid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Suppose $C$ is a collection of mathematical objects 
+(for instance, sets, or functions).
+Then we say that $C$ is \emph{rigid} if every $c\in C$ 
+is uniquely determined by less information about $c$ than 
+one would expect.
+
+It should be emphasized that the above ``definition''  does not
+define a \emph{mathematical object}. Instead, it describes in what sense
+the adjective rigid is typically used in mathematics, 
+by mathematicians. 
+
+Let us illustrate this by some examples:
+
+\begin{enumerate}
+%\item Liouville's theorem: If 
+%the difference of two entire functions is bounded, the functions are equal. 
+\item Harmonic functions on the unit disk are rigid in the sense that
+ they are uniquely determined by their boundary values. 
+\item By the fundamental theorem of algebra, polynomials in $\sC$
+are rigid in the sense that any polynomial is completely determined by
+its values on any countably infinite set, say $\sN$, or the unit disk. 
+\item Linear maps $\mathscr{L}(X,Y)$ between vector spaces $X,Y$
+are rigid in the sense that any $L\in\mathscr{L}(X,Y)$ is completely 
+determined by its values on any set of basis vectors of $X$. 
+\item Mostow's rigidity theorem
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArgMinAndArgMax}
+\pmcreated{2013-03-22 14:27:55}
+\pmmodified{2013-03-22 14:27:55}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{arg min and arg max}
+\pmrecord{11}{35986}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmdefines{argmin argmax}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For a real-valued function $f$ with domain $S$, $\arg \min_{x \in S} f(x)$ is the set of elements in $S$ that achieve the global minimum in $S$,
+\[
+ {\arg \min}_{x \in S} f(x) = \{ x \in S :\, f(x) = \min_{y\in S} f(y) \}.
+\]
+
+$\arg \max_{x \in S} f(x)$ is the set of elements in $S$ that achieve the global maximum in $S$,
+\[
+ {\arg \max}_{x \in S} f(x) = \{ x \in S :\, f(x) = \max_{y\in S} f(y) \}.
+\]
+
+
+
+%%%%%
+%%%%%
+\end{document}

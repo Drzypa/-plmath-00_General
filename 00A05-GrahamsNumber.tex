@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GrahamsNumber}
+\pmcreated{2013-03-22 17:15:15}
+\pmmodified{2013-03-22 17:15:15}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Graham's number}
+\pmrecord{4}{39589}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{05A05}
+\pmclassification{msc}{68P30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Graham's number} $G$ is an upper bound in a problem in Ramsey theory, first mentioned in a paper by Ronald Graham and B. Rothschild. The {\it Guinness Book of World Records} calls it the largest number ever used in a mathematical proof. Graham's number is too difficult to write in scientific notation, so it is generally written using Knuth's arrow-up notation. In Graham's paper, the bound is given as
+
+\[
+6 \le N(2) \le
+A(A(A(A(A(A(A(12,3),3),3),3),3),3),3),
+\]
+
+where $N(2)$ is the least natural number such that $n\ge N(2)$ implies that given any arbitrary $2$-coloring of the line segments between pairs of vertices of an $n$-dimensional box, there must exist a monochromatic rectangle in the box.
+
+Here $A$ is the function defined by (this is a direct quote):
+
+\[
+A(1,n) = 2^n, A(m,2) = 4,\ m\ge 1,\ n\ge 2, \\
+A(m,n) = A(m-1, A(m, n-1)),\ m\ge 2,\ n\ge 3.
+\]
+
+In the earlier paper Graham and Rothschild called this function $F$ instead of $A$, and commented: ``Clearly, there is some room for improvement here.''
+
+In Knuth's arrow-up notation, Graham's number is still cumbersome to write: we define the recurrence relation $g_1 = 3 \uparrow \uparrow \uparrow \uparrow 3$ and $g_n = 3\uparrow^{g_{n - 1}}3$. Graham's number is then $G = g_{64}$.
+
+To help understand Graham's number from the more familiar viewpoint of standard exponentiation, Wikipedia offers the following chart:
+
+$$ 
+g_1 
+= 3 \uparrow \uparrow \uparrow \uparrow 3 
+= 3 \uparrow \uparrow \uparrow (3 \uparrow \uparrow \uparrow 3) 
+= 3 \uparrow \uparrow \uparrow 
+  \left( 
+    \begin{matrix} 
+      \underbrace{3^{3^{\cdot^{\cdot^{\cdot^{3}}}}}} & \  \\ 
+      3^{3^3} & \text{threes} 
+    \end{matrix}
+  \right)
+= \left.
+    \begin{matrix}
+      \underbrace{3^{3^{\cdot^{\cdot^{\cdot^{3}}}}}} & \  \\
+      \underbrace{3^{3^{\cdot^{\cdot^{\cdot^{3}}}}}} & \text{threes} \\
+      \vdots & \vdots \\
+      \underbrace{3^{3^{\cdot^{\cdot^{\cdot^{3}}}}}} & \text{threes}  \\
+      3^{3^3} & \text{threes} \\
+    \end{matrix}
+  \right \}
+  \begin{matrix}
+    \ & \ \\
+    \underbrace{3^{3^{\cdot^{\cdot^{\cdot^{3}}}}}} & \mbox{ layers} \\ 
+    3^{3^3} & \text{ threes}
+  \end{matrix} 
+$$
+
+We don't know what the most significant base 10 digits of Graham's number are, but we do know that the least significant digit is 7 (and of course 0 in base 3).
+
+Graham's number has its own entry in Wells's {\it Dictionary of Curious and Interesting Numbers}, it is the very last entry, right after Skewes' number, which it significantly dwarfs, and which was once also said to be the largest number ever used in a serious mathematical proof.  
+
+\begin{thebibliography}{2}
+\bibitem{ms} M. P. Slone, PlanetMath message, March 19, 2007.
+\bibitem{rg} R.~L.~Graham and B.~L.~Rothschild, ``Ramsey's theorem for $n$-parameter sets'', {\it Trans.~Amer.~Math.~Soc.}, {\bf 159} (1971): 257 - 292
+\bibitem{rg} R.~L.~Graham and B.~L.~Rothschild. Ramsey theory. {\it Studies in combinatorics}, ed. G.-C.~Rota, Mathematical Association of America, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

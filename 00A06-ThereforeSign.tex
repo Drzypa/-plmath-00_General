@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThereforeSign}
+\pmcreated{2013-03-22 17:55:51}
+\pmmodified{2013-03-22 17:55:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{therefore sign}
+\pmrecord{8}{40425}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{00A05}
+\pmrelated{RingsOfRationalNumbers}
+\pmrelated{LogarithmicScale}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em therefore sign} ``$\therefore$'' is used especially in handwritten mathematical text as a shorthand of the \PMlinkescapetext{word `therefore' or `thus', between some sentences} or relations:
+$$S_1 \quad \therefore \; S_2$$
+It expresses that $S_2$ has been inferred from $S_1$ or from $S_1$ and some preceding facts.  The sign is rather a punctuation mark than a symbol of logical implication.  Grammatically, it could be characterised a conclusive coordinating \PMlinkescapetext{conjunction}.  The usage of the symbol is not mathematically well-defined, and it often means `we can conclude in context' or `we can conclude from statements already shown or assumed to be true'.\\
+
+For example, in determining an angle of a right triangle, one may write
+$$\sin\alpha = \frac{1}{2} \quad \therefore \; \alpha = 30^\circ$$
+Here, ``$\therefore$'' does not \PMlinkescapetext{represent} a proper implication ``$\Rightarrow$'', since the exact implication here would be
+$$\sin\alpha = \frac{1}{2} \;\, \Leftarrow \;\, \alpha = 30^\circ.$$
+To obtain a strict implication, we would need to introduce some of the context.
+For instance, we know that, since $\alpha$ is an angle of a right triangle,
+$0^\circ \le \alpha \le 90^\circ$,
+so what we wrote could be interpreted as the implication
+$$\sin\alpha = \frac{1}{2} \; \land \;
+  0^\circ \le \alpha \le 90^\circ
+  \;\, \Rightarrow \;\, \alpha = 30^\circ.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnExampleOfMathematicalInduction}
+\pmcreated{2013-03-22 15:39:46}
+\pmmodified{2013-03-22 15:39:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{an example of mathematical induction}
+\pmrecord{7}{37596}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{00A35}
+\pmclassification{msc}{03E25}
+\pmrelated{PrincipleOfFiniteInduction}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Below is a step-by-step demonstration of how mathematical induction (the Principle of Finite Induction) works.
+
+\textbf{Proposition.}  For any positive integer $n$, $2^{n-1}\le n!$.
+
+\begin{proof}  
+
+\textbf{Setup.}  Let $S$ be the set of positive integers $n$ satisfying the rule: $2^{n-1}\le n!$.  We want to show that $S$ is the set of \emph{all} positive integers, which would prove our proposition.
+
+\textbf{Initial Step.}  For $n=1$, $2^{n-1}=2^{1-1}=2^0=1$, while $n!=1!=1$.  So $2^{n-1}=n!$ for $n=1$ and thus $2^{n-1}\le n!$ all the more so.  This shows that $1\in S$.
+
+\textbf{Induction Step 1.}  Assume that for $n=k$, $k$ a positive integer, $2^{n-1}\le n!$.  In other words, we assume that $k\in S$, or that $2^{k-1}\le k!$.
+
+\textbf{Induction Step 2.}  Next, we want to show that $k+1\in S$.  If we let $n=k+1$, then by the assumption of the proposition, showing $n=k+1\in S$ is the same as showing $2^{n-1}\le n!$, or $2^k\le (k+1)!$.  This can be done by the following calculation:
+\begin{eqnarray}
+2^k &=& 2^{k-1}2\\ &\le& k!2\\ &\le& k!(k+1)\\ &=& (k+1)!,
+\end{eqnarray}
+where Equations (1) and (4) are just definitions of the power and the factorial of a number, respectively.  Step (3) is the fact that $2\le k+1$ for any positive integer $k$ (which, incidentally, can be proved by mathematical induction as well).  Step (2) follows from the \emph{induction step}, the assumption that we made in the \textbf{Induction Step 1.} in the previous paragraph.  Because $2^k\le (k+1)!$, we have thus shown that $n=k+1\in S$, proving the proposition.
+\end{proof}
+
+\textbf{Remark.} All these steps are essential in any proof by (mathematical) induction.  However, in more advanced math articles and books, some or all of these steps are omitted with the assumption that the reader is already familiar with the concepts and the steps involved.
+%%%%%
+%%%%%
+\end{document}

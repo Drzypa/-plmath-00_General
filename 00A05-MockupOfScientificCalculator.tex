@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MockupOfScientificCalculator}
+\pmcreated{2013-03-22 16:53:50}
+\pmmodified{2013-03-22 16:53:50}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{mock-up of scientific calculator}
+\pmrecord{4}{39154}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{01A65}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+This mock-up of a scientific calculator is realistic in that it has almost every function one can expect on a typical scientific calculator. It is unrealistic in that each function gets its own key. Usually, scientific calculators have some kind of shift key (labeled ``Shift'', ``2nd'' or something similar) and almost all the other buttons (including the digit buttons) have a second or even third use. Sometimes these shifts make sense (sine and arcsine on the same key, for example), sometimes less so (for example, the random number generator on the key for $\pi$ or the decimal point).
+
+\begin{tabular}{|c|c|c|c|c|}
+BIN & EE & & OFF & ON \\
+OCT & $\frac{d}{c}$ & RAND & & C \\
+DEC & $a \frac{b}{c}$ & $\Sigma +$ & $\Sigma -$ & $y\sigma n - 1$ \\
+HEX & nCr & $\hat{x}$ & $\hat{y}$ & $y\sigma n$ \\
+x! & nPr & $\bar{x}$ & $\bar{y}$ & $x\sigma n - 1$ \\
+$e^x$ & $\pi$ & $P \to R$ & $R \to P$ & $x\sigma n$ \\
+ln & DEG & GRAD & RAD & MR \\
+$10^x$ & $\sin^{-1}$ & $\cos^{-1}$ & $\tan^{-1}$ & M+ \\
+log & sin & cos & tan & STO \\
+$\sqrt[y]{x}$ & D & E & F & \% \\
+$x^y$ & A & B & C & $\div$ \\
+$\sqrt[3]{x}$ & 7 & 8 & 9 & $\times$ \\
+$x^3$ & 4 & 5 & 6 & $-$ \\
+$\sqrt{x}$ & 1 & 2 & 3 & + \\
+$x^2$ & 0 & . & $\pm$ & = \\
+$\frac{1}{x}$ & & & & \\
+\end{tabular}
+
+Not all scientific calculators support binary, octal and hexadecimal display. Fractions display and conversion is another category of functions that is available on many, but not all, scientific calculators. The trigonometric and statistical functions, on the other hand, are always standard, even if the button labels aren't always (mainly for the statistical functions). The percentage key is more of a rarity on scientific calculators, something reflected by the Windows Calculator, which has percentage in Standard mode but not Scientific (puzzlingly, this is also true of the square root key).
+
+Square root and cubic root are usually ``postfix'' operations, e.g., meaning that to compute $\sqrt{2209}$ one would enter $[2] [2] [0] [9] [\sqrt{x}]$. On the CVS-brand scientific calculator with 2-line display, however, that would result in a ``syntax error''; the square root key has to be pushed before the digits of the operand.
+%%%%%
+%%%%%
+\end{document}

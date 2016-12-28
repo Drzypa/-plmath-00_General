@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RydiasMathemagicMinute}
+\pmcreated{2013-03-22 18:57:16}
+\pmmodified{2013-03-22 18:57:16}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Rydia's Mathemagic Minute}
+\pmrecord{5}{41811}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\em Rydia's Mathemagic Minute} is a mini-game from {\it Final Fantasy XIII} in which Rydia presents the player a riddle in the form of four numbers, each in the range $-1 < n < 10$ which the player must then employ in conjunction with a selection of basic arithmetic operations (addition, subtraction, multiplication, division) in order to obtain 10 as a result. For example, given \{8, 8, 6, 4\}, one possible solution is $8 \times 8 - 4 \div 6$. If the player can solve the riddle, he is given another riddle of the same form, until exhausting the time limit of 90 seconds. A player may skip a riddle and move on to another one, but in so doing incurs a penalty in negative points. Correctly answering five riddles in a row results in the player receives a time limit extension.
+
+Concatenation is not allowed. For example, given \{1, 7, 2, 9\}, $19 - (2 + 7)$ is not a valid answer; the program in fact will not allow the player to even try concatenation. Answers involving negative numbers at intermediate steps are not valid either, though when they occur they're displayed in blue (in lieu of a minus sign). Fractions are not at all allowed at intermediate steps, and when the player presents an operation that would result in such a result (e.g., dividing a number by a smaller coprime number), the computer simply rejects the operation.
+
+The mini-game can be played either as a side quest on the full game, or by itself online at {\PMlinkescapetext Square Enix Members}.
+%%%%%
+%%%%%
+\end{document}

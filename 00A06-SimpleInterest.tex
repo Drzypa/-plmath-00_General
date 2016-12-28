@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleInterest}
+\pmcreated{2013-03-22 16:40:06}
+\pmmodified{2013-03-22 16:40:06}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{simple interest}
+\pmrecord{7}{38875}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{00A69}
+\pmclassification{msc}{91B28}
+\pmrelated{CompoundInterest}
+\pmrelated{InterestRate}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Suppose a bank account is opened at time $0$ and $M_0$ is deposited into the account.  A \emph{simple interest} is interest with the following characteristics:
+\begin{enumerate}
+\item it is earned at subsequent time periods $t,2t,\ldots$, where $t$ is the length of the initial time interval (1 for 1 month, 12 for 1 year, etc...)
+\item the interest earned at the end of each time period is the same regardless of the time period
+\end{enumerate}
+The following table illustrates the structure of the simple interest.
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline  time period at & principal & interest & interest accrued \\
+\hline\hline $0$ & $M_0$ & $0$ & $0$ \\
+\hline $t$ & $M_0$ & $i$ & $i$ \\
+\hline $2t$ & $M_0$ & $i$ & $2i$ \\
+\hline $3t$ & $M_0$ & $i$ & $3i$ \\
+\hline $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
+\hline $nt$ & $M_0$ & $i$ & $ni$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The ``total'' interest $i(nt)$ earned (accrued) at the end of time $nt$ is $ni$.  If the account is closed and the money withdrawn at the end of $nt$, and the total amount of money received is $$M(nt)=M_0+ni.$$
+
+The interest rate associated with the simple interest as presented above between two time periods, say $at$ and $bt$, is given by
+$$r(at,bt)=\frac{1}{M_0}\frac{i(bt)-i(at)}{bt-at}=\frac{i}{M_0t},$$
+which does not depend on the choice of $a$ and $b$.  In other words, the original principal $M_0$, the amount of interest $i$, and the length of the initial time interval $t$ are enough to determine the interest rate.
+
+\textbf{Remark}.  
+\begin{itemize}
+\item
+The expression for the effective interest rate for simple interest is a bit more complicated:
+$$\operatorname{eff.}r(at,bt)=\frac{1}{M(at)}\frac{i(bt)-i(at)}{bt-at}=
+\frac{1}{M_0+ai}\frac{i}{t},$$
+which decreases with increasing $a$.  Imagine as $a$ becomes very large, the increase in interest has practically no impact on the ``accumulated'' principal $M(at)$.
+\item
+More generally, we say that an interest is \emph{simple} if its interest rate $r$ is constant with respect to time $t$.  Solving
+$$r=\frac{1}{M_0}\frac{i(t)-i(0)}{t-0}$$
+for $i(t)$, we get $i(t)=M_0rt$, or that the accrued interest is a linear function of $t$.  It grows directly proportionally with respect to time.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaxicabNumbers}
+\pmcreated{2013-03-22 15:43:00}
+\pmmodified{2013-03-22 15:43:00}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{taxicab numbers}
+\pmrecord{6}{37664}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+The number $1729$ has a reputation of its own. The reason is the famous exchange between \PMlinkexternal{G. H. Hardy}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Hardy.html}, a famous British mathematician (1877-1947), and \PMlinkexternal{Srinivasa Ramanujan}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Ramanujan.html} , one of India's greatest mathematical geniuses (1887-1920):
+
+\begin{quote}
+In 1917, during one visit to Ramanujan in a hospital (he was ill for much of his last three years), Hardy mentioned that the number of the taxi cab
+that had brought him was $1729$, which, as numbers go, Hardy thought 
+was ``rather a dull number''.  At this, Ramanujan perked up, and said
+``No, it is a very interesting number; it is the smallest number
+expressible as a sum of two cubes in two different ways.''
+\end{quote}
+
+Indeed:
+$$1729=1+12^3=9^3+10^3.$$
+Moreover, there are other reasons why $1729$ is far from dull. $1729$ is the third Carmichael number. Even more strange, beginning at the 
+$1729$th decimal digit of the transcental number $e$, the next ten 
+successive digits of $e$ are 0719425863. This is the first appearance
+of all ten digits in a row without repititions.
+
+More generally, the smallest natural number which can be expressed as the sum of $n$ positive cubes is called the $n$th taxicab number. The first taxicab numbers are:
+$$2=1^3+1^3,\ 1729 =1^3+12^3=9^3+10^3,\ 87539319=167^3+436^3=228^3+423^3=255^3+414^3$$
+followed by $6963472309248$ (found by E. Rosenstiel, J.A. Dardis, and C.R. Rosenstiel in 1991) and $48988659276962496$ (found by David Wilson on November 21st, 1997).
+%%%%%
+%%%%%
+\end{document}

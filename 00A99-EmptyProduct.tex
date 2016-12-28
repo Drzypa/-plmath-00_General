@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EmptyProduct}
+\pmcreated{2013-03-22 14:48:13}
+\pmmodified{2013-03-22 14:48:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{empty product}
+\pmrecord{15}{36458}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+\pmrelated{EmptySet}
+\pmrelated{IndeterminateForm}
+\pmrelated{LocallyEuclidean}
+\pmrelated{AnalyticContinuationOfGammaFunction}
+\pmrelated{Introducing0thPower}
+\pmrelated{EmptySum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em empty product} of numbers is the borderline case of product, where the number of \PMlinkescapetext{factors is zero, i.e. the set of the factors} is empty. \,The most usual examples are the following.
+\begin{itemize}
+\item The \PMlinkname{zeroth power}{Introducing0thPower} of a non-zero number:\, $a^0$
+\item The factorial of 0:\, 0!
+\item The \PMlinkname{prime factor presentation}{FundamentalTheoremOfArithmetics} of unity, which has no prime factors
+\end{itemize}
+The value of the empty sum of numbers is equal to the additive identity number, 0.\, Similarly, the empty product of numbers is equal to the 
+\PMlinkname{multiplicative identity}{Unity} number, 1.
+
+\textbf{Note.}\, When considering the complex numbers as pairs of real numbers one often identifies the pairs $(x,\,0)$ and the reals $x$.\, In this sense one can think that the Cartesian product $\mathbb{R}\times\{0\}$ is equal to $\mathbb{R}$.\, This seems to \PMlinkescapetext{mean} the equation
+$$\mathbb{R}\times\mathbb{R}^0 = \mathbb{R}^{1+0} = \mathbb{R}^1 = \mathbb{R},$$
+although the \PMlinkname{associativity}{GeneralAssociativity} of Cartesian product is nowhere stated.\, Nevertheless, it is sometimes natural to define that the Cartesian product of an empty collection of sets equals to a set with one element; so it may \PMlinkescapetext{mean} that e.g.\, $\mathbb{R}^0 = \{0\}.$
+
+One can also consider empty products in categories.
+It follows directly from the definition that an object in a category
+is a \PMlinkname{product}{CategoricalDirectProduct}
+of an empty family of objects in the category
+if and only if it is a terminal object of the category.
+Sets are a special case of this:
+in the category of sets the singletons are the terminal objects,
+so the empty product exists and is a singleton.
+%%%%%
+%%%%%
+\end{document}

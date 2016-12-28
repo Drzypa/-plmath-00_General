@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecimalPlace}
+\pmcreated{2013-03-22 17:27:24}
+\pmmodified{2013-03-22 17:27:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{decimal place}
+\pmrecord{12}{39839}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmrelated{MetricSystem}
+\pmdefines{decimal place value}
+\pmdefines{hundreds}
+\pmdefines{thousands}
+\pmdefines{tenths}
+\pmdefines{hundredths}
+\pmdefines{thousandths}
+\pmdefines{ten thousandths}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{right}
+
+A \emph{decimal place} of a number (a real number) $r$ is the position of a digit in its decimal expansion relative to the decimal point.  Let us write $r$ as a decimal number:
+\begin{center}
+$\xymatrix @C=0pt @H=10pt {A_nA_{n-1}\ldots A_1 & \bullet & D_1D_2\ldots D_m \ldots \\
+& \save *\txt{the decimal point} \restore \ar[u] & }$
+\end{center}
+where each of the $A_i$ and $D_j$ is a digit in the decimal system (one of $0,1,2,3,4,5,6,7,8,9$).  In this decimal expansion,
+\begin{itemize}
+\item the $i$-th decimal place to the left of the decimal point is the position of $A_i$, and 
+\item the $j$-th decimal place to the right of the decimal place is the position of $D_j$.  
+\end{itemize}
+The digits $A_i$ and $D_j$ are called the \emph{decimal place values}.  $A_i$ is the decimal place value corresponding to the $i$-th decimal place to the left of the decimal point, while $D_j$ is the decimal place value corresponding to the $j$-th decimal place to the right of the decimal point.
+
+For decimal places closer to the decimal point, specific names are used.  Below are some of the most commonly used names:
+
+\begin{center}
+\begin{tabular}{|c||r|r|r|}
+\hline name & position from & direction from & example \\
+ & the decimal point & the decimal point & (position of 7) \\
+\hline \hline ones & 1st & left & $7.2$ \\
+\hline tens & 2nd & left & $71(=71.0)$ \\
+\hline hundreds & 3rd & left & $735(=735.0)$ \\
+\hline thousands & 4th & left & $7126(=7126.0)$ \\
+\hline tenths & 1st & right & $0.7$ \\
+\hline hundredths & 2nd & right & $12.47$ \\
+\hline thousandths & 3rd & right & $9.837$ \\
+\hline ten thousandths & 4th & right & $6.0037$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Remark}.  Instead of saying the $n$-th decimal place to the left or right of the decimal point, we simply say the $n$-th decimal place to mean the $n$-th decimal place to the \emph{right} of the decimal point, and say $(-n)$-th decimal place to mean the $n$-th decimal place to the \emph{left} of the decimal point.  
+
+For example, in $1632.9758$, the digit $5$ is located on the third decimal place, while $6$ is located on the negative third decimal place.
+%%%%%
+%%%%%
+\end{document}

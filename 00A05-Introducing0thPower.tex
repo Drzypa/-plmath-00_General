@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Introducing0thPower}
+\pmcreated{2013-03-22 13:24:20}
+\pmmodified{2013-03-22 13:24:20}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{introducing 0th power}
+\pmrecord{8}{33948}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmrelated{EmptyProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $a$ be a number not equal to zero. Then for all $n \in \mathbb{N}$, we have that $a^n$ is the product of $a$ with itself $n$ \PMlinkescapetext{times}. Using the fact that the integer 1 is a multiplicative identity, ($a\cdot 1=a$ for any $a$), we can write
+\begin{displaymath}
+a^n \cdot 1=a^n=a^{n+0}=a^n\cdot a^0,
+\end{displaymath}
+where we have used the properties of exponents under multiplication.  Now, after canceling a factor of $a^n$ from both sides of the above equation, we derive that $a^0=1$ for any non-zero number.
+%%%%%
+%%%%%
+\end{document}

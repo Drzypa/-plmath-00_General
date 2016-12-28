@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ErrorsCanCancelEachOtherOut}
+\pmcreated{2013-03-22 18:59:39}
+\pmmodified{2013-03-22 18:59:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{errors can cancel each other out}
+\pmrecord{13}{41861}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A35}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{97D70}
+%\pmkeywords{miscalculation}
+\pmrelated{UniversalTrigonometricSubstitution}
+\pmrelated{SubstitutionNotation}
+\pmrelated{IntegrationOfRationalFunctionOfSineAndCosine}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+If one uses the \PMlinkname{change of variable}{ChangeOfVariableInDefiniteIntegral}
+\begin{align}
+\tan{x} \;:=\; t, \quad dx \;=\; \frac{dt}{1\!+\!t^2},\quad \cos^2x \;=\; \frac{1}{1\!+\!t^2}
+\end{align}
+for finding the value of the definite integral
+$$I \;:=\; \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}}\frac{dx}{2\cos^2x+1},$$
+the following calculation looks appropriate and faultless:
+\begin{align}
+I \;=\; \int_1^{-1}\!\!\frac{dt}{3\!+\!t^2} 
+    \;=\; \frac{1}{\sqrt{3}}\!\!\sijoitus{1}{\;\quad -1}\!\arctan\frac{t}{\sqrt{3}}
+    \;=\; \frac{1}{\sqrt{3}}\!\left(\frac{5\pi}{6}-\frac{\pi}{6}\right) \;=\; \frac{2\pi}{3\sqrt{3}}
+\end{align}
+
+The result is quite \PMlinkescapetext{right}.\, Unfortunately, the calculation \PMlinkescapetext{contains} two errors, the effects of which cancel each other out.\\
+
+The crucial error in (2) is using the substitution (1) when $\tan{x}$ is discontinuous in the point 
+\,$x = \frac{\pi}{2}$\, on the interval \,$[\frac{\pi}{4},\,\frac{3\pi}{4}]$\, of integration.\, The error is however canceled out by the second error using the value $\frac{5\pi}{6}$ for $\arctan\frac{-1}{\sqrt{3}}$, when the right value were $-\frac{\pi}{6}$ (the values of arctan lie only between $-\frac{\pi}{2}$ and $\frac{\pi}{2}$; see cyclometric functions).\, The value $\frac{5\pi}{6}$ belongs to a different branch of the inverse tangent function than $\frac{\pi}{6}$; parts of two distinct branches cannot together form the antiderivative which must be continuous.\\
+
+What were a right way to calculate $I$?\, The universal trigonometric substitution produces an awkward integrand
+$$\frac{2\!+\!2t^2}{3\!-\!2t^2\!+\!3t^4}$$
+and \PMlinkescapetext{limits} $\sqrt{2}-1$ and $1-\sqrt{2}$,\, therefore it is unusable.\, It is now better to change the interval of integration, using the properties of trigonometric functions.
+
+Since the (graph of) cosine squared is symmetric about the line \,$x = \frac{\pi}{2}$,\, we could integrate only over\, 
+$[\frac{\pi}{4},\,\frac{\pi}{2}]$ and multiply the integral by 2 (cf. integral of even and odd functions):
+$$I \;=\; 2\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}\frac{dx}{2\cos^2x+1}.$$
+We can also get rid of the inconvenient upper limit $\frac{\pi}{2}$ by changing over to the sine in virtue of the complement formula 
+$$\cos(\frac{\pi}{2}\!-\!x) \;=\; \sin{x},$$
+getting
+$$I \;=\; 2\int_0^{\frac{\pi}{4}}\frac{dx}{2\sin^2x+1}.$$
+Then (1) is usable, and because\, $\sin^2x = \frac{t^2}{1\!+\!t^2}$,\, we obtain
+$$I \;=\; 2\int_0^1\frac{dt}{\left(\frac{2t^2}{1\!+\!t^2}+1\right)(1\!+\!t^2)}
+    \;=\; 2\int_0^1\frac{dt}{3t^2\!+\!1} \;=\; \frac{2}{\sqrt{3}}\!\!\sijoitus{0}{\;\quad 1}\!\arctan{t\sqrt{3}}
+    \;=\; \frac{2\pi}{3\sqrt{3}}.$$
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

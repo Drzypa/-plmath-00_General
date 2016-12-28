@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoublingAndHalvingAlgorithmForIntegerMultiplication}
+\pmcreated{2013-03-22 17:01:20}
+\pmmodified{2013-03-22 17:01:20}
+\pmowner{CompositeFan}{12809}
+\pmmodifier{CompositeFan}{12809}
+\pmtitle{doubling and halving algorithm for integer multiplication}
+\pmrecord{5}{39307}
+\pmprivacy{1}
+\pmauthor{CompositeFan}{12809}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{11B25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Because multiplying and dividing by 2 is often easier for humans than multiplying and dividing by other numbers there is an algorithm for multiplication of any two integers that takes advantage of multiplication and division by 2.
+
+Call the algorithm with two integers.
+
+\begin{enumerate}
+\item Use one of the integers to start a column on the left and the other to start a column on the right. (Either number can be put in either column, there are very minor optimizations that are unlikely to make a difference in performance, such as not choosing for the left column numbers that end long Cunningham chains).
+\item Divide the previous integer on the left column by 2 and write the yield below it, ignoring any fractional part there may be. Multiply the previous integer on the right column by 2 and write the product below.
+\item Repeat Step 2 until the yield on the left column is 1.
+\item For every even number on the left column, cross out the right column's number of the same row.
+\item Add up the the numbers on the right column that haven't been crossed out.
+\end{enumerate}
+
+For example, to multiply 108 by 255:
+
+\begin{tabular}{|r|r|}
+108 & $\not{255}$ \\
+54 & $\not{510}$ \\
+27 & 1020 \\
+13 & 2040 \\
+6 & $\not{4080}$ \\
+3 & 8160 \\
+1 & 16320 \\
+ & 27540 \\
+\end{tabular}
+
+This works in any base (as long as one doesn't get confused about parity in odd bases). For example, 18 times 24 in base 5:
+
+\begin{tabular}{|r|r|}
+33 & $\not{44}$ \\
+14 & 143 \\
+4 & $\not{341}$ \\
+2 & $\not{1232}$ \\
+1 & 3014 \\
+ & 3212
+\end{tabular}
+ 
+Naturally one might wonder if this can be applied to binary and used by computers. After all, halving and ignoring the fractional part is even easier: it's just a matter of shifting the bits to the right, and it doesn't matter what the computer does with the discarded bit (as long as it doesn't put it back into the original byte or word in the most significant bit or the sign bit). Doubling is also easy, just a shift left, with the only concern being overflow.
+
+\begin{tabular}{|r|r|}
+1010 & $\not{111}$ \\
+101 & 1110 \\
+10 & $\not{11100}$ \\
+1 & 111000 \\
+ & 1000110 \\
+\end{tabular}
+
+Of course this algorithm is not suitable for large integer multiplication as is required in the search for large prime numbers.
+
+\begin{thebibliography}{1}
+\bibitem{pe} Paul Erd\H{o}s \& J\'anos Sur\'anyi {\it Topics in the theory of numbers} New York: Springer (2003): 5
+\bibitem{o} Ogilvy \& Anderson, {\it Excursions in Number Theory}. Oxford: Oxford University Press (1966). Reprinted New York: Dover (1988): 6 - 8
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

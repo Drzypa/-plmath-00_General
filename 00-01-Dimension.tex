@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Dimension}
+\pmcreated{2013-03-22 14:02:50}
+\pmmodified{2013-03-22 14:02:50}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{dimension}
+\pmrecord{10}{35398}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00-01}
+\pmclassification{msc}{15A03}
+\pmclassification{msc}{54F45}
+\pmrelated{Dimension}
+\pmrelated{Dimension2}
+\pmrelated{DimensionKrull}
+\pmrelated{HausdorffDimension}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+% This entry is supposed to be a popular explanation of
+% different ways to define dimension in mathematics
+% and why these definitions should make sense.
+% This is the reason why this entry does not list any
+% terms in ``defines'' field. Rigorous definitions should
+% be supplied by other entries
+%
+% Suggestions for improvement are welcome.
+\PMlinkescapeword{small}\PMlinkescapeword{natural}
+The word \emph{dimension} in mathematics has many definitions, but
+all of them are trying to quantify our intuition that, for
+example, a sheet of paper has somehow one less dimension than a
+stack of papers.
+
+One common way to define dimension is through some notion of a
+number of independent quantities needed to describe an element
+of an object. For example, it is natural to say that the sheet of
+paper is two-dimensional because one needs two real numbers to
+specify a position on the sheet, whereas the stack of papers is
+three-dimension because a position in a stack is specified by a sheet
+and a position on the sheet. Following this notion, in linear
+algebra the \PMlinkname{dimension of a vector space}{Dimension2} 
+is defined as the minimal number of vectors such that every other
+vector in the vector space is representable as a sum of these.
+Similarly, the word \emph{rank} denotes various dimension-like
+invariants that appear throughout the algebra.
+
+However, if we try to generalize this notion to the mathematical
+objects that do not possess an algebraic structure, then we run
+into a difficulty. From the point of view of set theory there are
+\PMlinkname{as many}{Cardinality} real numbers as pairs of real
+numbers since there is a bijection from real numbers to pairs of
+real numbers. To distinguish a plane from a cube one needs to
+impose restrictions on the kind of mapping. Surprisingly, it turns
+out that the continuity is not enough as was pointed out by Peano.
+There are continuous functions that map a square onto a cube. So,
+in topology one uses another intuitive notion that in a
+high-dimensional space there are more directions than in a
+low-dimensional. Hence, the (Lebesgue covering) dimension of a
+topological space is defined as the smallest number $d$ such that
+every covering of the space by open sets can be refined so that no
+point is contained in more than $d+1$ sets. For example, no matter
+how one covers a sheet of paper by sufficiently small other sheets
+of paper such that two sheets can overlap each other, but
+cannot merely touch, one will always find a point that is covered
+by $2+1=3$ sheets.
+
+Another definition of dimension rests on the idea that
+higher-dimensional objects are in some sense larger than the
+lower-dimensional ones. For example, to cover a cube with a side
+length $2$ one needs at least $2^3=8$ cubes with a side length
+$1$, but a square with a side length $2$ can be covered by only
+$2^2=4$ unit squares. Let $N(\epsilon)$ be the minimal number of
+open balls in any covering of a bounded set $S$ by balls of radius
+$\epsilon$. The \PMlinkname{Besicovitch-Hausdorff dimension}{HausdorffDimension} of $S$ is defined
+as $-\lim_{\epsilon\to 0} \log_\epsilon N(\epsilon)$. The
+Besicovitch-Hausdorff dimension is not always defined, and when
+defined it might be non-integral.
+%%%%%
+%%%%%
+\end{document}

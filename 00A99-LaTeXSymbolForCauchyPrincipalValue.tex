@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaTeXSymbolForCauchyPrincipalValue}
+\pmcreated{2013-03-22 17:49:51}
+\pmmodified{2013-03-22 17:49:51}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{\LaTeX symbol for Cauchy principal value}
+\pmrecord{5}{40296}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+\pmrelated{LogarithmicIntegral2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+
+\begin{document}
+The usual symbol (dashed integral) used to denote Cauchy's principal value of an integral can be created in 
+\emph{\LaTeX{}} through macros.{\footnote{\emph{UK} List of \emph{\TeX{}} is a reference.}} These one are given by the following instructions, which must be included on the {\em preamble}.\\
+\begin{verbatim}
+\def\Xint#1{\mathchoice
+   {\XXint\displaystyle\textstyle{#1}}%
+   {\XXint\textstyle\scriptstyle{#1}}%
+   {\XXint\scriptstyle\scriptscriptstyle{#1}}%
+   {\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+   \!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$}
+     \vcenter{\hbox{$#2#3$}}\kern-.5\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+\end{verbatim}
+The commands to execute those macros are \, $``\backslash dashint"$ \, and\, $``\backslash ddashint"$ \, for single dash and double dash, respectively. Let us expose a few examples.
+\begin{itemize}
+\item\, \begin{equation*}\ddashint_\Omega F(\zeta,\eta)d\zeta d\eta\end{equation*}
+\item\, \begin{equation*}\dashint_{z_0}^z f(\zeta)d\zeta\end{equation*}
+\item\, \begin{equation*}Ei(z)=-\dashint_{-z}^\infty \frac{e^{-\zeta}}{\zeta}d\zeta=\dashint_{-\infty}^z\frac{e^\zeta}{\zeta}d\zeta,\quad\Re{z}>0,\quad \text{(exponential integral)}\end{equation*}
+\item\, \begin{equation*}li(z)=\dashint_0^z\frac{d\zeta}{\log\zeta}\equiv Ei(\log z),\; \Re{z}>1,\quad
+\text{(logarithmic integral)}\end{equation*}
+\item\, \begin{equation*}\Gamma(z)\Gamma(1-z)=-z\Gamma(-z)\Gamma(z)=\dashint_0^\infty \frac{\zeta^{z-1}}{\zeta+1}d\zeta
+=\pi\csc\pi z,\quad 0<\Re{z}<1,\quad\text{(Gamma function reflection's formula)}\end{equation*}
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

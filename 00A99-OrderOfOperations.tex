@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfOperations}
+\pmcreated{2013-03-22 13:24:28}
+\pmmodified{2013-03-22 13:24:28}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{order of operations}
+\pmrecord{7}{33951}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+\pmsynonym{operator precedence}{OrderOfOperations}
+\pmsynonym{precedence of operations}{OrderOfOperations}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+The \emph{order of operations} is a convention that tells us how to evaluate mathematical expressions (these could be purely numerical).  The problem arises because expressions consist of operators applied to variables or values (or other expressions) that each demand \emph{individual evaluation}, yet the order in which these individual evaluations are done leads to different outcomes.  
+
+A conventional order of operations solves this.  One could technically do without memorizing this convention, but the only alternative is to use parentheses to group every single term of an expression and evaluate the innermost operations first.
+
+For example, in the expression $a\cdot b + c$, how do we know whether to apply multiplication or addition first?  We could interpret even this simple  expression two drastically different ways:
+
+\begin{enumerate}
+\item Add $b$ and $c$,
+\item Multiply the sum from (1) with $a$.
+\end{enumerate}
+
+or
+
+\begin{enumerate}
+\item Multiply $a$ and $b$,
+\item Add to the product in (1) the value of $c$.
+\end{enumerate}
+
+One can see the different outcomes for the two cases by selecting some different values for $a$, $b$, and $c$.  The issue is resolved by convention in order of operations: the correct evaluation would be the second one.  
+
+The nearly universal mathematical convention dictates the following order of operations (in order of which operators should be evaluated first):
+
+\begin{enumerate}
+\item Factorial.
+\item Exponentiation.
+\item Multiplication.
+\item Division.
+\item Addition.
+\end{enumerate}
+
+Any parenthesized expressions are automatically higher ``priority'' than anything on the above list.  
+
+There is also the problem of what order to evaluate repeated operators of the same type, as in:
+
+$$ a / b / c / d $$
+
+The solution in this problem is typically to assume the left-to-right interpretation.  For the above, this would lead to the following evaluation:
+
+$$ (((a/b)/c)/d) $$
+
+In other words,
+
+\begin{enumerate}
+\item Evaluate $a / b$.
+\item Evaluate (1)/$c$.
+\item Evaluate (2)/$d$.
+\end{enumerate}
+
+Note that this isn't a problem for associative operators such as multiplication or addition in the reals.  One must still proceed with caution, however, as associativity is a notion bound up with the concept of groups rather than just operators.   Hence, context is extremely important.
+
+Exponentiation is an exception to the left-to-right assumption, as it is evaluated right-to-left.  That is, $a$\^{}$b$\^{}$c$ is computed as 
+
+\begin{enumerate}
+\item Evaluate $b$\^{}$c$.
+\item Evaluate $a$\^{}(1).
+\end{enumerate}
+
+Of course, this could also have been written as $a^{b^c}$, and in this form can be thought of as evaluated ``highest to lowest''.
+
+For more obscure operations than the ones listed above, parentheses should be used to remove ambiguity.  Completely new operations are typically assumed to have the highest priority, but the definition of the operation should be accompanied by some sort of explanation of how it is evaluated in relation to itself.  For example, Conway's chained arrow notation explicitly defines what order repeated applications of itself should be evaluated in (it is right-to-left rather than left-to-right)!
+%%%%%
+%%%%%
+\end{document}

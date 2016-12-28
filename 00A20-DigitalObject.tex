@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DigitalObject}
+\pmcreated{2013-03-22 15:30:38}
+\pmmodified{2013-03-22 15:30:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{digital object}
+\pmrecord{11}{37374}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{digital object} in a digital library is the textual or multimedia data and the metadata.
+
+Formally, a digital object $DO$ is a quadruple $(h, SM, ST, SS)$ where
+\begin{enumerate}
+\item $h\in H$, where $H$ is a set of universally unique handles (labels);
+\item $SM = \lbrace sm_1, sm_2, . . . , sm_n\rbrace$ is a set of streams;
+\item $ST = \lbrace st_1, st_2, . . . , st_m\rbrace$ is a set of structural metadata specifications; and
+\item $SS = \lbrace stsm_1, stsm_2, . . . , stsm_p\rbrace$ is a set of Structured Streams functions defined from the streams in $SM$ and from the structures in $ST$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

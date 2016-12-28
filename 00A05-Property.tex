@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Property}
+\pmcreated{2013-03-22 14:01:29}
+\pmmodified{2013-03-22 14:01:29}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{property}
+\pmrecord{15}{35001}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmsynonym{attribute}{Property}
+\pmsynonym{propositional function}{Property}
+\pmrelated{Subset}
+\pmrelated{CharacteristicFunction}
+\pmrelated{Relation}
+\pmrelated{ClosureOfARelationWithRespectToAProperty}
+\pmdefines{unary relation}
+\pmdefines{predicate}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\begin{document}
+Let $X$ be a set.  A \emph{property} $p$ of $X$ is a function $$p\colon X\to \{\mathit{true},\mathit{false}\}.$$  An element $x\in X$ is said to \emph{have} or \emph{does not have the property} $p$ depending on whether $p(x)=\mathit{true}$ or $p(x)=\mathit{false}$.  Any property gives rise in a natural way to the set $$X(p):=\lbrace x\in X | \ x\text{ has property }p\rbrace$$ and the corresponding \PMlinkid{characteristic function}{CharacteristicFunction} $1_{X(p)}$.  The identification of $p$ with $X(p)\subseteq X$ enables us to think of a property of $X$ as a 1-ary, or a \emph{unary relation} on $X$.  Therefore, one may treat all these notions equivalently.
+
+Usually, a property $p$ of $X$ can be identified with a so-called \emph{propositional function}, or a \emph{predicate} $\varphi(v)$, where $v$ is a variable or a tuple of variables whose values range over $X$.  The values of a propositional function is a proposition, which can be interpreted as being either ``true'' or ``false'', so that $X(p)=\lbrace x \mid \varphi(x)\mbox{ is }\mathit{true}\rbrace$.
+
+Below are a few examples:
+\begin{itemize}
+\item
+Let $X=\mathbb{Z}$.  Let $\varphi(v)$ be the propositional function ``$v$ is divisible by $3$''.  If $p$ is the property identified with $\varphi(v)$, then $X(p)=3\mathbb{Z}$.  
+\item
+Again, let $X=\mathbb{Z}$.  Let $\varphi(v_1,v_2):=$``$v_1$ is divisible by $v_2$'' and $p$ the corresponding property.  Then $$X(p)=\lbrace (m,n)\mid m=np\mbox{, for some }p\in \mathbb{Z}\rbrace,$$ which is a subset of $X\times X$.  So $p$ is a property of $X\times X$.  
+\item
+The reflexive property of a binary relation on $X$ can be identified with the propositional function $\varphi(V):=``\forall a\in X\mbox{, }(a,a)\in V$'', and therefore $$X(p)=\lbrace R\subseteq X\times X\mid \varphi(R)\mbox{ is }\mathit{true}\rbrace,$$ which is a subset of $2^{X\times X}$.  Thus, $p$ is a property of $2^{X\times X}$.
+\item
+In point set topology, we often encounter the finite intersection property on a family of subsets of a given set $X$.  Let $$\varphi(\mathcal{V}):=``\forall n\in \mathbb{N}, \forall E_1\in \mathcal{V},\ldots,\forall E_n\in \mathcal{V}, \exists x\in X (x\in E_1\cap \cdots \cap E_n)\mbox{''}$$
+and $p$ the corresponding property, then $$X(p)=\lbrace \mathcal{F} \subseteq 2^X\mid \varphi(\mathcal{F})\mbox{ is }\mathit{true}\rbrace,$$ which is a subset of $2^{2^X}$.  Thus $p$ is a property of $2^{2^X}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

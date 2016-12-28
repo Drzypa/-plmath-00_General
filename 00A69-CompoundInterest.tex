@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompoundInterest}
+\pmcreated{2013-03-22 16:40:09}
+\pmmodified{2013-03-22 16:40:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{compound interest}
+\pmrecord{6}{38876}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A69}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{91B28}
+\pmsynonym{continuously-compounded}{CompoundInterest}
+\pmsynonym{compounded continuously}{CompoundInterest}
+\pmrelated{SimpleInterest}
+\pmrelated{InterestRate}
+\pmdefines{continuously compounded}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Suppose a bank account is opened at time $0$ and $M_0$ is deposited into the account.  A \emph{compound interest} on the account is interest that is earned according to the following procedure:
+\begin{enumerate}
+\item it is payable at the end of time periods $t,2t,\ldots$, where $t>0$ is the length of the first time interval (1 for 1 month, 12 for 1 year, etc...)
+\item the interest earned at the end of each time period is a fixed percentage $r$ of the principal at the beginning of the time period
+\item the interest earned at the end of the time period is added to the principal at the beginning of the time period, the total of which is the principal at the beginning of the next time period
+\end{enumerate}
+The following table illustrates the structure of the compound interest.
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+\hline  time period & principal & interest & interest accrued \\
+\hline\hline $0$ & $M_0$ & $0$ & $0$ \\
+\hline $t$ & $M_0(r+1)$ & $M_0r$ & $M_0r$ \\
+\hline $2t$ & $M_0(r+1)^2$ & $M_0(r+1)r$ & $M_0r+M_0r(r+1)$ \\
+\hline $3t$ & $M_0(r+1)^3$ & $M_0(r+1)^2r$ & $M_0r+M_0r(r+1)+M_0r(r+1)^2$ \\
+\hline $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ \\
+\hline $nt$ & $M_0(r+1)^n$ & $M_0(r+1)^{n-1}r$ & $M_0\big[(r+1)^n-1\big]$ \\
+\hline
+\end{tabular}
+\end{center}
+
+From the table, we see that the ``total'' interest $i(nt)$ earned (accrued) at the end of time $nt$ is $M_0\big[(r+1)^n-1 \big]$.  Furthermore, the principal ``compounds'', or ``grows'' exponentially.  If the account is closed and the money withdrawn at the end of $nt$, and the total amount of money received is $$M(nt)=M_0(r+1)^n.$$
+
+The interest rate associated with the compound interest as presented above between two time periods, say $at$ and $bt$, is rather complicated 
+$$r(at,bt)=\frac{1}{M_0}\frac{i(bt)-i(at)}{bt-at}=\frac{(r+1)^b-(r+1)^a}{(b-a)t}.$$
+
+The effective interest rate has the following form:
+$$\operatorname{eff.}r(at,bt)=\frac{1}{M(at)}\frac{i(bt)-i(at)}{bt-at}=\frac{(r+1)^{(b-a)}-1}{(b-a)t},$$
+which means that $\operatorname{eff.}r$ depends only on $r,t$ (which are constants), and most importantly, $b-a$, the difference between the two time periods.  If $b=a+1$ and $t$ is normalized to $1$, then the effective interest rate takes on a particularly simple form: $$\operatorname{eff.}r(at,bt)=r.$$
+
+
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+More generally, we say that an interest is a \emph{compound interest} if its effective interest rate between two time periods $t_1$ and $t_2$ depends only on $t_2-t_1$.  If we set $t_1=t \in \mathbb{N}$ and $t_2=t+1$, solving  
+$$\operatorname{eff.}r(t_1,t_2):=\frac{1}{M(t_1)} \frac{M(t_2)-M(t_1)}{t_2-t_1}$$
+for $M(t+1)$, we get $M(t+1)=M(t)\big(\operatorname{eff.}r(t,t+1)+1\big)$.  But $$r:=\operatorname{eff.}r(0,1)=\cdots =\operatorname{eff.}r(t,t+1),$$ we have $M(t+1)=M(t)(r+1)$, or $M(t) = M_0(r+1)^t$ by induction.
+\item
+An interest is said to be \emph{compounded continuously} if it is differentiable with respect to time $t$ and its instantaneous effective interest rate is a constant $r$. If we solve the corresponding differential equation (with respect to instantaneous effective interest rate), we see that for a continously compounded interest, $$M(t)=Me^{rt}.$$
+The effective interest rate of a continuously compounded interest is $$\frac{1}{M(t_1)}\frac{M(t_2)-M(t_1)}{t_2-t_1} =\frac{1}{Me^{rt_1}}\frac{Me^{rt_2}-Me^{rt_1}}{r_2-r_1} =\frac{e^{r(t_2-t_1)}-1}{r_2-r_1}.$$
+Since it is a function of $r_2-r_1$, interest compounded continuously is a compounded interest.
+\item 
+In practice, compound rates are often quoted annually, even the compounding may be monthly, or semi-annually, or even continuously.  For example, $6\%$ annual interest rate compounded monthly means $0.5\% (=6\%/12)$ is compounded every month.  The annual effective interest rate in this case is $(1+0.5\%)^{12}-1\approx 6.17\%$.  So what is the annual effective interest rate of a $6\%$ annual interest rate compounded continuously?  It is the following:
+$$\operatorname{eff.}r=\lim_{n\to \infty} (1+\frac{6\%}{n})^n-1=e^{6\%}-1\approx 6.18\%.$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

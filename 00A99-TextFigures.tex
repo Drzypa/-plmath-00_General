@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TextFigures}
+\pmcreated{2013-03-22 17:06:48}
+\pmmodified{2013-03-22 17:06:48}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{text figures}
+\pmrecord{5}{39413}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+ \usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Some fonts have a {\em text figures} variant of the digits 0 to 9 where some of them have ascenders and some have descenders so that they blend better with the general text. Here is Champernowne's constant $C_{10}$ to 9 decimal places written in Georgia:
+
+\begin{center}
+\includegraphics{TextFiguresDemo}
+\end{center}
+
+Usually, 6 and 8 have ascenders, 3, 4, 5, 7 and 9 have descenders. Since most texts use base 10 numbers, and each digit usually occurs in about the same proportion as the other digits, this means that numbers have varying heights in just about the same propoertions as the  words in the text. Using text figures for base 3 numbers would result in numbers always lacking in ascenders and descenders. For mathematical books and papers, however, text figures are generally eschewed.
+%%%%%
+%%%%%
+\end{document}

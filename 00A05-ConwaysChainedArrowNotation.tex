@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConwaysChainedArrowNotation}
+\pmcreated{2013-03-22 12:58:46}
+\pmmodified{2013-03-22 12:58:46}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Conway's chained arrow notation}
+\pmrecord{8}{33351}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmsynonym{chained arrow notation}{ConwaysChainedArrowNotation}
+\pmsynonym{chained arrow}{ConwaysChainedArrowNotation}
+\pmsynonym{chained-arrow}{ConwaysChainedArrowNotation}
+\pmsynonym{chained-arrow notation}{ConwaysChainedArrowNotation}
+\pmsynonym{Conway notation}{ConwaysChainedArrowNotation}
+\pmrelated{KnuthsUpArrowNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+\emph{Conway's chained arrow notation} is a way of writing numbers even larger than those provided by the up arrow notation.  We define $m\rightarrow n\rightarrow p=m^{(p+2)}n=m\underbrace{\uparrow\cdots\uparrow}_{p}n$ and $m\rightarrow n=m\rightarrow n\rightarrow 1=m^n$.  Longer chains are evaluated by 
+
+$$m\rightarrow\cdots\rightarrow n\rightarrow p\rightarrow 1=
+m\rightarrow\cdots\rightarrow n\rightarrow p$$
+
+
+$$m\rightarrow\cdots\rightarrow n\rightarrow 1\rightarrow q=m\rightarrow\cdots\rightarrow n$$
+
+and
+
+$$m\rightarrow\cdots\rightarrow n\rightarrow p+1\rightarrow q+1=
+m\rightarrow\cdots\rightarrow n\rightarrow (m\rightarrow\cdots\rightarrow n\rightarrow p\rightarrow q+1)\rightarrow q$$
+
+For example:
+\begin{align*}
+3\rightarrow3\rightarrow2 =\\
+3\rightarrow(3\rightarrow2\rightarrow2)\rightarrow1 = \\
+3\rightarrow(3\rightarrow2\rightarrow2) = \\
+3\rightarrow(3\rightarrow(3\rightarrow1\rightarrow2)\rightarrow1) = \\
+3\rightarrow(3\rightarrow3\rightarrow1) = \\
+3^{3^3} = \\
+3^{27} = 
+7625597484987
+\end{align*}
+
+A much larger example is:
+\begin{align*}
+3\rightarrow 2\rightarrow 4\rightarrow 4=\\
+3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow 3\rightarrow 4)\rightarrow 3=\\
+3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow 2\rightarrow 4)\rightarrow 3)\rightarrow 3=\\
+3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow 1\rightarrow 4)\rightarrow 3)\rightarrow 3)\rightarrow 3=\\
+3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2)\rightarrow 3)\rightarrow 3)\rightarrow 3=\\
+3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow (3\rightarrow 2\rightarrow 9\rightarrow 3)\rightarrow 3)\rightarrow 3
+\end{align*}
+
+Clearly this is going to be a very large number.  Note that, as large as it is, it is proceeding towards an eventual final evaluation, as evidenced by the fact that the final number in the chain is getting smaller.
+%%%%%
+%%%%%
+\end{document}

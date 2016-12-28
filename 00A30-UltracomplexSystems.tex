@@ -1,0 +1,244 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UltracomplexSystems}
+\pmcreated{2013-03-22 18:11:40}
+\pmmodified{2013-03-22 18:11:40}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{ultra-complex systems}
+\pmrecord{19}{40771}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A30}
+\pmclassification{msc}{18A40}
+\pmclassification{msc}{37B25}
+\pmclassification{msc}{93D15}
+\pmclassification{msc}{18A05}
+\pmclassification{msc}{93D21}
+\pmclassification{msc}{37B10}
+\pmsynonym{extremely complex systems}{UltracomplexSystems}
+\pmsynonym{the mind}{UltracomplexSystems}
+%\pmkeywords{extremely complex systems}
+%\pmkeywords{highest level of existence in Categorical Ontology}
+\pmrelated{CategoricalOntology}
+\pmrelated{RosettaGroupoids}
+\pmrelated{StrongAIThesis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,color,enumerate}
+%%\usepackage{xypic}
+\xyoption{curve}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{7.1in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.2in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-1.0in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.30in
+
+%the next gives two direction arrows at the top of a 2 x 2 matrix
+
+\newcommand{\directs}[2]{\def\objectstyle{\scriptstyle}  \objectmargin={0pt}
+\xy
+(0,4)*+{}="a",(0,-2)*+{\rule{0em}{1.5ex}#2}="b",(7,4)*+{\;#1}="c"
+\ar@{->} "a";"b" \ar @{->}"a";"c" \endxy }
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+
+\theoremstyle{plain}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\Ce}{\mathsf{C}}
+\newcommand{\Q}{\mathsf{Q}}
+\newcommand{\grp}{\mathsf{G}}
+\newcommand{\dgrp}{\mathsf{D}}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{\operatorname{Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+
+\newcommand{\hdgb}{\boldsymbol{\rho}^\square}
+\newcommand{\hdg}{\rho^\square_2}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\renewcommand{\leq}{{\leqslant}}
+\renewcommand{\geq}{{\geqslant}}
+
+\def\red{\textcolor{red}}
+\def\magenta{\textcolor{magenta}}
+\def\blue{\textcolor{blue}}
+\def\<{\langle}
+\def\>{\rangle}
+
+\begin{document}
+\subsection{Ultra-complex systems}
+ 
+ An \emph{ultra-complex system} represents the human mind from the standpoint
+of a generalized Categorical Ontology Theory of Levels as the highest level of complexity that 
+emerged through biological and social coevolution over the last $2.2$ million years on Earth.
+
+\subsubsection{Preliminary Data:}
+
+One can represent in square categorical diagrams the emergence of ultra-complex
+dynamics from the super-complex dynamics of human organisms coupled {\em via} social interactions 
+in characteristic patterns represented by \PMlinkname{Rosetta biogroupoids}{RosettaGroupoids}, together with the complex--albeit inanimate--systems with `chaos'.  With the emergence of the ultra-complex system of the human mind-- based on the super-complex human organism-- there is always an associated
+progression towards higher dimensional algebras from the lower
+dimensions of human neural network dynamics and the simple algebra
+of physical dynamics, as shown in the following, essentially \emph{non-commutative} categorical diagram.
+
+\begin{definition} 
+An \emph{ultra-complex system, $U_{CS}$} is defined as an object representation in the following non-commutative
+diagram of systems and dynamic system morphisms or `dynamic transformations':
+
+ $$ \xymatrix@C=5pc{[SUPER-COMPLEX] \ar [r] ^{(\textbf{Higher
+Dim})} \ar[d] _{\Lambda}& ~~~(U_{CS}= ULTRA-COMPLEX) \ar [d]^{onto}\\ COMPLEX&
+\ar [l] ^{(\textbf{Generic Map})}[SIMPLE]} $$
+\end{definition}
+Note that the above diagram is indeed not `natural' (i.e. it is not commutative) for reasons
+related to the emergence of the higher dimensions of the super--complex
+(biological/organismic) and/or ultra--complex (psychological/neural network dynamic) levels in comparison with
+the low dimensions of either simple (physical/classical) or complex (chaotic) dynamic systems. 
+
+ 
+%%%%%
+%%%%%
+\end{document}

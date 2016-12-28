@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Indeterminate}
+\pmcreated{2013-03-22 14:47:33}
+\pmmodified{2013-03-22 14:47:33}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{indeterminate}
+\pmrecord{5}{36444}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmrelated{Parameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{solvable}
+\PMlinkescapeword{alphabet}
+
+An {\em indeterminate}\, is simply a variable that is not known or solvable. \,It is usually denoted by a mathematical alphabet ($x$, $y$, $z$, or $\alpha$, $\beta$, etc...). \,It is important to distinguish between a variable and an indeterminate in that a variable is solvable, at least conditionally. \,To make this more precise, let's see two examples:
+
+\begin{enumerate}
+\item Let $x$ be a variable such that \,$2+3x=a+bx$, where $a,b\in\mathbb{Q}$.  Then \,$x=(a-2)/(3-b)$. \,Here $x$ is solvable conditioned on the equation given.  Any values of $a$ and $b\,(\neq 3)$ will yield a value for $x$.
+\item Let $x$ be an indeterminate such that \,$2+3x=a+bx$, where \,$a,\,b\in\mathbb{Q}$. \,Since $x$ can not be solved, we have \,$2=a$\, and \,$3=b$. \,Note that if $a$ and $b$ are previously assigned to be values other than 2 and 3 respectively, then $x$ is no longer an indeterminate.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

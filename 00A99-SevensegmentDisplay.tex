@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SevensegmentDisplay}
+\pmcreated{2013-03-22 17:06:51}
+\pmmodified{2013-03-22 17:06:51}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{seven-segment display}
+\pmrecord{5}{39414}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Most calculators use a {\em seven-segment display} to show both input and output numbers. Here is Champernowne's constant $C_{10}$ to 9 decimal places in a seven-segment display:
+
+\begin{center}
+\includegraphics{SevenSegmentDisplay}
+\end{center}
+
+Technically, the space for the decimal point counts as a segment, so for each place value there are actually eight segments. Generally, calculator manufacturers prefer the base 10 pandigital number 1234567980 as a demo number for the calculator packaging.
+
+Sometimes wear and tear can cause a segment to not light up or darken properly; this can occasionally lead to confusion between digits. The simplest way to test for this is to input $8 \times \frac{10^x - 1}{9}$, where $x$ is the the number of decimal place values available on the display (that is, a bunch of 8s). At various times in the past some manufacturers have developed variants of the glyphs for the digits to make it more obvious when a segment has burnt out, such as a 0 that looks like a lowercase O, or a 6 that looks like a lowercase B. Given that many scientific calculators offer the option of doing calculations in hexadecimal, the latter option is not acceptable for such calculators. The 7 on Sharp-brand calculators uses the upper left vertical segment.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NegativeNumber}
+\pmcreated{2013-03-22 17:13:34}
+\pmmodified{2013-03-22 17:13:34}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{negative number}
+\pmrecord{12}{39553}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmrelated{ClassificationOfComplexNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A {\em negative number} is a number that is less than zero. It is the ``opposite'' of a positive number. It can be the result of a subtraction in which the subtrahend is greater than the minuend. In everyday life, negative numbers are most often used to indicate debts.
+
+For example, Bob's checking account has \$47.20 and Alice cashes the check he gave her for \$80.00, and the bank gives the requested amount. Bob's account is then down to $-32.80$, and could be further indebted if the bank collects some sort of fee for giving more money than was available.
+
+In a number line, negative numbers are usually to the left of zero:
+
+\begin{center}
+\begin{pspicture}(-1,-0.3)(5,0.3)
+\psline{<->}(-1,0)(5,0)
+\psdots(0,0)(1,0)(2,0)(3,0)(4,0)
+\rput[a](0,-0.3){-2}
+\rput[a](1,-0.3){-1}
+\rput[a](2,-0.3){0}
+\rput[a](3,-0.3){+1}
+\rput[a](4,-0.3){+2}
+\rput[l](-1,0){.}
+\rput[r](5,0){.}
+\end{pspicture}
+\end{center}
+
+In a 2-dimensional coordinate plane, negative numbers on the vertical axis are usually below zero. (In the complex plane, technically, they may be above if desired).
+
+Whereas giving a plus sign for positive numbers is optional, giving the minus sign for negative numbers is a must.
+
+Addition and subtraction of negative numbers is fairly straightforward and intuitive. Suppose Bob also gave Carol and Dick a check for \$80.00 each and they both cash their checks after Alice cashed hers. This is $-32.80 - 80.00 - 80.00 = -192.80$. Multiplication of a negative number by a positive number is also straightforward. Suppose Bob's bank charges a fee of \$25.00 for each instance of overdraft. This translates to $-25.00 \times 3 = -75.00$.
+
+However, multiplication of a negative number by another negative number gives a positive number. In all honesty, I can't think of a situation in everyday life in which it would be necessary to multiply two negative numbers. At any rate, the rule of sign changes has the consequence that $(-x)^a > 0$ if $a$ is even and $(-x)^a < 0$ if $a$ is odd. This comes in very handy in number theory for creating alternating sums or checking the relative density of one kind of number to another. For example, for squarefree $n$, the M\"obius function $\mu(n) = (-1)^{\omega(n)}$ (where $\omega(n)$ is the number of distinct prime factors function).
+
+As a consequence of these sign changes, a positive real number $x^2$ technically has two square roots, $x$ and $-x$. The specific case of $x^2 = 25$ was used in {\it The Simpsons} episode ``Girls Just Want to Have Sums,'' (first aired April 30, 2006) in which Lisa Simpson dressed up as a boy to sneak into a math class. Asked for the solution, Lisa answers 5, but the teacher says this is wrong. Martin then gives the two correct answers, 5 and $-5$. Even computer algebra systems, and certainly most scientific calculators, will only give the positive answer.
+
+What numbers are the square roots of a negative real number? No such numbers exist. More precisely, they are imaginary numbers, multiples of the imaginary unit. For example, $\sqrt{-25} = 5i$ or $-5i$.
+
+A question that comes up much less often is: What is a negative number raised to a fractional power? As you may know, raising a positive number to the reciprocal of $n$ has the same effect as taking the $n$th root of $n$. We can plot the integer powers of, say, 2, with dots and then connect the dots with straight lines; the result, though not technically correct, would not be too far off the mark (which would be a smooth curve connecting the dots). From such a graphic we might draw the incorrect conclusion that $2^{1.5} = 3$, while the correct answer (the base 2 logarithm of 3) is more like 1.5849625007211561815.
+
+Whether we connect the dots in a plot of $(-2)^n$ with either straight lines or curves, we might be fooling ourselves. The incorrect conclusion of $(-2)^{1.5} = 0$ just doesn't make sense.
+
+\begin{center}
+\includegraphics{NegTwoIntegerPowers}
+\end{center}
+
+On most scientific calculators, trying to raise a negative number to a fractional power will result in an error exception (unless of course you enter it in such a way that the calculator interprets as merely a positive number raised to a fractional power and then multiplied by $-1$).
+
+Once again, imaginary numbers come to the rescue. Since the square root of a negative number is an imaginary number, it only makes sense to extend this to negative numbers raised to fractional powers. For example, $(-2)^{\frac{3}{2}} = -2i\sqrt{2}$ (and of course the complex conjugate of that).
+
+In Mathematica, I made the following plot of $(-2)^n$ in steps of $\frac{1}{10}$ and then separated the resulting complex numbers into their real and imaginary parts.
+
+\begin{center}
+\includegraphics{NegTwoFractPowers2D}
+\end{center}
+
+Not entirely convinced this is right, I tried a 3-dimensional plot (in the plot, $x$ runs from 1 to 2, $y$ runs from 1 to 40 and $z$ runs from $-20$ to 20):
+
+\begin{center}
+\includegraphics{NegTwoFractPowers}
+\end{center}
+
+As a final sanity check, I compared this to a similar plot of $2^n$ (with the axes oriented in the same way as in the previous plot):
+
+\begin{center}
+\includegraphics{PosTwoWImPlot}
+\end{center}
+
+In the end, though the 3-dimensional plots may look ``cooler,'' the 2-dimensional plot is actually more enlightening, showing the powers of a negative number fall on a logarithmic spiral.
+
+\begin{thebibliography}{2}
+\bibitem{ck} Screen name ``Cromulent Kwyjibo''. Personal communication, June 8, 2007.
+\bibitem{am} Alberto A. Mart\'inez, {\it Negative Math: How Mathematical Rules Can Be Positively Bent}. Princeton and Oxford: Princeton University Press (2006)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

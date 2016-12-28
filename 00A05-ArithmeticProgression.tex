@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArithmeticProgression}
+\pmcreated{2013-03-22 13:39:00}
+\pmmodified{2013-03-22 13:39:00}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{arithmetic progression}
+\pmrecord{10}{34302}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{11B25}
+\pmrelated{MulidimensionalArithmeticProgression}
+\pmrelated{SumOfKthPowersOfTheFirstNPositiveIntegers}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{columns}
+Arithmetic progression of length $n$, initial term $a_1$ and common difference $d$ is the sequence $a_1, a_1+d,a_1+2d,\dotsc,a_1+(n-1)d$.
+
+%%%This code is not displayed by PlanetMath... seems to be a bug in LaTeX2HTML
+%%%  Added later: parbox fixes it since it forces LaTeX2HTML to render the whole
+%%%               thing as an image
+The sum of terms of an arithmetic progression can be computed using Gauss's trick:
+
+\parbox{\linewidth}{\begin{align*}
+S&=\makebox[7em]{$(a_1+0)$}+\makebox[7em]{$(a_1+d)$}+\dotsb+\makebox[7em]{$(a_1+(n-2)d)$}
++\makebox[7em]{$(a_1+(n-1)d)$}\\
++\underline{S\vphantom{\makebox[7em]{$(a_1+(n-1)d)$}}}&\underline{{}=\makebox[7em]{$(a_1+(n-1)d)$}+
+\makebox[7em]{$(a_1+(n-2)d)$}+\dotsb+\makebox[7em]{$(a_1+d)$}
++\makebox[7em]{$(a_1+0)$}}\\
+2S&=\makebox[7em]{$(2a_1+(n-1)d)$}+\makebox[7em]{$(2a_1+(n-1)d)$}+\dotsb+\makebox[7em]{$(2a_1+(n-1)d)$}+
+\makebox[7em]{$(2a_1+(n-1)d)$}.
+\end{align*}}
+
+We just add the sum with itself written backwards, and the sum of each of the columns equals to $(2a_1+(n-1)d)$. The sum is then
+\begin{equation*}
+S=\frac{(2a_1+(n-1)d)n}{2}.
+\end{equation*}
+%%%%%
+%%%%%
+\end{document}

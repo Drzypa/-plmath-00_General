@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subsequence}
+\pmcreated{2013-03-22 12:56:34}
+\pmmodified{2013-03-22 12:56:34}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{subsequence}
+\pmrecord{6}{33300}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Given a sequence $\{x_n\}_{n\in \Nats}$, any infinite subset of the sequence forms a subsequence. We formalize this as follows:
+
+\begin{defn}
+If $X$ is a set and $\{a_n\}_{n \in \mathbb{N}}$ is a sequence in $X$, then a \emph{subsequence} of $\{a_n\}$ is a sequence of the form $\{a_{n_r}\}_{r \in \mathbb{N}}$ where $\{n_r\}_{r \in \mathbb{N}}$ is a strictly increasing sequence of natural numbers.
+\end{defn}
+
+Equivalently, $\{y_n\}_{n\in \Nats}$ is a subsequence of $\{x_n\}_{n\in \Nats}$ if
+\begin{enumerate}
+\item $\{y_n\}_{n\in\Nats}$ is a sequence of elements of $X$, and
+
+\item there is a strictly increasing function $a:\Nats \to \Nats$ such that $$y_n = x_{a(n)} \quad \text{ for all } n\in\Nats.$$
+\end{enumerate}
+
+\begin{exa}
+Let $X=\Reals$ and let $\{x_n\}$ be the sequence 
+$$\left\{\frac{1}{n}\right\}_{n\in\Nats}=\left\{1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\ldots\right\}.$$ Then, the sequence $$\{y_n\}_{n\in\Nats}=\left\{\frac{1}{n^2}\right\}_{n\in\Nats}=\left\{1,\frac{1}{4},\frac{1}{9},\frac{1}{16},\ldots\right\}$$
+is a subsequence of $\{x_n\}$. The subsequence of natural numbers mentioned in the definition is $\{n^2\}_{n\in\Nats}$ and the function $a:\Nats\to\Nats$ mentioned above is $a(n)=n^2$.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

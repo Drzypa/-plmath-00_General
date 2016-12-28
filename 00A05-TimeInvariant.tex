@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TimeInvariant}
+\pmcreated{2013-03-22 15:02:14}
+\pmmodified{2013-03-22 15:02:14}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{time invariant}
+\pmrecord{5}{36748}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmrelated{AutonomousSystem}
+\pmdefines{time-invariant}
+\pmdefines{shift-invariant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A dynamical system is {\bf time-invariant} if its generating formula is dependent on state only, and independent of time.  A synonym for time-invariant is autonomous.  The complement of time-invariant is time-varying (or nonautonomous).
+
+For example, the continuous-time system $\dot{x}=f(x,t)$ is time-invariant if and only if $f(x,t_1)\equiv f(x,t_2)$ for all valid states $x$ and times $t_1$ and $t_2$.  Thus $\dot{x}=\sin x$ is time-invariant, while $\dot{x}=\frac{\sin x}{1+t}$ is time-varying.
+
+Likewise, the discrete-time system $x[n]=f[x,n]$ is time-invariant (also called shift-invariant) if and only if $f[x,n_1]\equiv f[x,n_2]$ for all valid states $x$ and time indices $n_1$ and $n_2$.  Thus $x[n]=2 x[n-1]$ is time-invariant, while $x[n]=2 n x[n-1]$ is time-varying.
+%%%%%
+%%%%%
+\end{document}

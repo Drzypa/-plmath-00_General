@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WindowsCalculator}
+\pmcreated{2013-03-22 16:39:22}
+\pmmodified{2013-03-22 16:39:22}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Windows Calculator}
+\pmrecord{8}{38861}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{01A07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\em Windows Calculator} is a software calculator that comes bundled with the Windows operating system. The basic mode is called ``Standard'' and is the default, Scientific mode has most of the operations available on a typical scientific calculator. Note that switching between modes causes the loss of the current value displayed (unless of course that value is 0). For some reason, Standard mode has a square root key but Scientific mode does not. As a workaround in scientific mode, one can enter, say, \verb=[2] [x^y] [0] [.] [5]=.
+
+Division by zero causes an error condition that must be cleared with the C key on the displayed keyboard (or the Escape key on the computer's keyboard). Integer values smaller than $10^{32}$ can be displayed in all their digits.  According to the Help, the Windows Calculator truncates $\pi$ to 32 digits, but rational numbers are stored internally ``as fractions''.
+
+Like most scientific calculators, the Windows Calculator can display results in binary, octal and hexadecimal, but is limited to integers in those bases. Additionally, negative numbers are shown in two's complement (and the sign change key performs two's complement on the displayed value). In those bases, the user can choose the data size: quadruple word (the default), double word, word or byte. Overflows don't trigger any kind of exception or error notification, the calculator quietly discards the more significant digits and displays the least significant digits that will fit in the currently selected data size.
+
+Like the Mac OS Calculator, for the Windows Calculator $0^0 = 1$. 
+
+\begin{thebibliography}{1}
+\bibitem{dk} David A. Karp, Tim O'Reilly \& Troy Mott, {\it Windows XP in a Nutshell} Cambridge: O'Reilly (2002): 114 - 117
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

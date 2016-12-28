@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompletingTheSquare}
+\pmcreated{2013-03-22 13:36:27}
+\pmmodified{2013-03-22 13:36:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{completing the square}
+\pmrecord{14}{34237}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A20}
+\pmrelated{SquareOfSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\sR}[0]{\mathbb{R}}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+ Let us consider the expression $x^2+xy$, where
+ $x$ and $y$ are real (or complex) numbers.
+ Using the formula
+ $$(x+y)^2 = x^2+2xy +y^2$$
+ we can write
+ \begin{eqnarray*}
+ x^2+xy &=& x^2+xy+ 0\\
+ &=& x^2+xy+ \frac{y^2}{4}-\frac{y^2}{4}\\
+ &=& \left(x+\frac{y}{2}\right)^2-\frac{y^2}{4}.
+ \end{eqnarray*}
+ This manipulation is called \emph{completing the square} \cite{adams} in
+ $x^2+xy$, or completing the square $x^2$.
+ 
+Replacing $y$ by $-y$, we also have
+ $$x^2-xy = \left(x-\frac{y}{2}\right)^2-\frac{y^2}{4}.$$
+
+Here are some applications of this method:
+\begin{itemize}
+\item 
+ \PMlinkname{Derivation of the solution formula to the quadratic equation}{DerivationOfQuadraticFormula}.
+\item Putting the general equation of a circle, ellipse, or hyperbola into standard form, e.g. the circle 
+\begin{align*}
+x^2+y^2+2x+4y=5\Rightarrow (x+1)^2 + (y+2)^2= 10,
+\end{align*}
+from which it is frequently easier to read off important information (the center, radius, etc.)
+\item Completing the square can also be used to find the extremal value
+of a quadratic polynomial \cite{thompson} without calculus. 
+Let us illustrate this for the polynomial $p(x)=4x^2+8x+9$. 
+Completing the square yields
+\begin{eqnarray*}
+p(x)   &=& (2x+2)^2-4 +9 \\
+ &=& (2x+2)^2+5 \\
+ &\ge & 5,
+\end{eqnarray*}
+since $(2x+2)^2\ge 0$. Here, equality holds if and 
+only if $x=-1$.
+Thus $p(x)\ge 5$ for all $x\in \sR$, and $p(x)=5$ if and only if
+$x=-1$. 
+It follows that $p(x)$ has a global minimum at $x=-1$, where $p(-1)=5$.
+\item Completing the square can also be used as an integration technique
+to integrate, for example the function $\displaystyle \frac{1}{4x^2+8x+9}$ \cite{adams}.
+\end{itemize}
+
+
+\begin{thebibliography}{9}
+\bibitem {adams} R. Adams, \emph{Calculus, a complete course}, 
+	Addison-Wesley Publishers Ltd, 3rd ed. 
+\bibitem {thompson} 
+        \emph{Matematiklexikon} (in Swedish), 
+ J. Thompson, T. Martinsson, Wahlstr\"om \& Widstrand, 1991.        
+\end{thebibliography}
+
+(Anyone has an English reference?)
+%%%%%
+%%%%%
+\end{document}

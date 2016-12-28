@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KnuthsUpArrowNotation}
+\pmcreated{2013-03-22 12:58:43}
+\pmmodified{2013-03-22 12:58:43}
+\pmowner{Henry}{455}
+\pmmodifier{Henry}{455}
+\pmtitle{Knuth's up arrow notation}
+\pmrecord{7}{33350}
+\pmprivacy{1}
+\pmauthor{Henry}{455}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmsynonym{up-arrow}{KnuthsUpArrowNotation}
+\pmsynonym{up arrow}{KnuthsUpArrowNotation}
+\pmsynonym{up-arrow notation}{KnuthsUpArrowNotation}
+\pmsynonym{up arrow notation}{KnuthsUpArrowNotation}
+\pmsynonym{Knuth notation}{KnuthsUpArrowNotation}
+\pmrelated{ConwaysChainedArrowNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+\emph{Knuth's up arrow noation} is a way of writing numbers which would be unwieldy in standard decimal notation.  It expands on the exponential notation $m\uparrow n=m^n$.  Define $m\uparrow\uparrow 0=1$ and $m \uparrow\uparrow n=m\uparrow(m\uparrow\uparrow [n-1])$.
+
+Obviously $m\uparrow\uparrow 1=m^1=m$, so $3\uparrow\uparrow 2=3^{3\uparrow\uparrow 1}=3^3=27$, but $2\uparrow\uparrow 3=2^{2 \uparrow\uparrow 2}=2^{2^{2\uparrow\uparrow 1}}=2^{(2^2)}=16$.
+
+In general, $m\uparrow\uparrow n=m^{m^{\cdots^m}}$, a tower of height $n$.
+
+Clearly, this process can be extended: $m\uparrow\uparrow\uparrow 0=1$ and $m\uparrow\uparrow\uparrow n=m\uparrow\uparrow(m\uparrow\uparrow\uparrow [n-1])$.
+
+An alternate notation is to write $m^{(i)}n$ for $m\underbrace{\uparrow\cdots\uparrow}_{i-2 \text{~times}}n$.  ($i-2$ times because then $m^{(2)}n=m\cdot n$ and $m^{(1)}n=m+n$.)  Then in general we can define $m^{(i)}n=m^{(i-1)}(m^{(i)}(n-1))$.
+
+To get a sense of how quickly these numbers grow, $3\uparrow\uparrow\uparrow 2=3\uparrow\uparrow 3$ is more than seven and a half trillion, and the numbers continue to grow much more than exponentially.
+%%%%%
+%%%%%
+\end{document}

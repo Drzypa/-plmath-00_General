@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfNesbittsInequality}
+\pmcreated{2013-03-22 12:37:01}
+\pmmodified{2013-03-22 12:37:01}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of Nesbitt's inequality}
+\pmrecord{6}{32876}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Starting from Nesbitt's inequality
+$$\frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}\geq\frac{3}{2}$$
+we transform the left hand side:
+$$\frac{a+b+c}{b+c}+\frac{a+b+c}{a+c}+\frac{a+b+c}{a+b}-3\geq\frac{3}{2}.$$
+Now this can be transformed into:
+$$((a+b)+(a+c)+(b+c))\left(\frac{1}{a+b}+\frac{1}{a+c}+\frac{1}{b+c}\right)\geq 9.$$
+Division by 3 and the right \PMlinkescapetext{factor} yields:
+$$\frac{(a+b)+(a+c)+(b+c)}{3}\geq\frac{3}{\frac{1}{a+b}+\frac{1}{a+c}+ \frac{1}{b+c}}.$$
+Now on the left we have the arithmetic mean and on the right the harmonic mean, so this inequality is true.
+%%%%%
+%%%%%
+\end{document}

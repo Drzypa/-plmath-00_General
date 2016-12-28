@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfOddNumbers}
+\pmcreated{2013-03-22 14:38:35}
+\pmmodified{2013-03-22 14:38:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sum of odd numbers}
+\pmrecord{15}{36230}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{11B25}
+\pmrelated{NumberOdd}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The sum of the first $n$ positive odd integers can be calculated by using the well-known \PMlinkescapetext{property} of the arithmetic progression, that the sum of its \PMlinkescapetext{terms} is equal to the arithmetic mean of the first and the last \PMlinkescapetext{term}, multiplied by the number of the \PMlinkescapetext{terms}:
+ $$\underbrace{1+3+5+7+9+\cdots+(2n\!-\!1)}_{n} = 
+     n\cdot\frac{1\!+\!(2n\!-\!1)}{2} = n^2$$
+Thus, the sum of the first $n$ odd numbers is $n^2$ (this result has been proved first time in 1575 by Francesco Maurolico).
+
+Below, the odd numbers have been set to form a triangle, each $n^{\rm{th}}$ row containing the next $n$ consecutive odd numbers.\, The arithmetic mean on the row is $n^2$ and the sum of its numbers is\, $n\cdot n^2 = n^3$.
+\begin{eqnarray*}
+\begin{array}{cccccccccccccccccc}
+& & & & & & & & & 1 & & & & & & & &\\
+& & & & & & & & 3 & & 5 & & & & & & &\\
+& & & & & & & 7 & & 9 & & 11 & & & & & &\\
+& & & & & & 13 & & 15 & & 17 & & 19 & & & & &\\
+& & & & & 21 & & 23 & & 25 & & 27 & & 29 & & & &\\
+& & & & 31 & & 33 & &35 & &37 & &39 & & 41 & & &\\
+& & & & &\vdots & & & & \vdots & & & & \vdots& & & & \\
+\end{array}
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

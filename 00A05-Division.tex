@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Division}
+\pmcreated{2014-08-08 17:51:29}
+\pmmodified{2014-08-08 17:51:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{division}
+\pmrecord{29}{36148}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{12E99}
+\pmrelated{InverseFormingInProportionToGroupOperation}
+\pmrelated{DivisionInGroup}
+\pmrelated{ConjugationMnemonic}
+\pmrelated{Difference2}
+\pmrelated{UniquenessOfDivisionAlgorithmInEuclideanDomain}
+\pmdefines{quotient}
+\pmdefines{ratio}
+\pmdefines{fundamental property of quotient}
+\pmdefines{reduction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\it Division} is the operation which assigns to every two numbers (or more generally, elements of a field) $a$ and $b$ their quotient or ratio, provided that the latter, $b$, is distinct from zero.
+
+The {\it quotient} (or {\it ratio})\, $\frac{a}{b}$\, of $a$ and $b$ may be defined as such a number (or element of the field) $x$ that\, $b \cdot x = a$.\, Thus,
+                     $$b\cdot\frac{a}{b} = a,$$
+which is the ``fundamental property of quotient''. 
+
+The quotient of the numbers $a$ and $b$ ($\neq 0$) is a 
+uniquely determined number, since if one had
+$$\frac{a}{b} = x \neq y = \frac{a}{b},$$
+then we could write 
+$$b(x-y) = bx-by = a-a = 0$$
+from which the supposition $b \neq 0$ would imply $x-y = 0$, i.e. 
+$x = y$.
+
+The explicit general expression for $\frac{a}{b}$ is
+                  $$\frac{a}{b} = b^{-1}\cdot a$$
+where $b^{-1}$ is the inverse number (the multiplicative inverse) of $a$, because
+                $$b(b^{-1}a) = (bb^{-1})a = 1a = a.$$
+
+\begin{itemize}
+ \item For positive numbers the quotient may be obtained by performing the division algorithm with $a$ and $b$.\, If\, $a > b > 0$,\, then $\frac{a}{b}$ indicates how many times $b$ fits in $a$.
+  \item The quotient of $a$ and $b$ does not change if both numbers (elements) are multiplied (or divided, which \PMlinkescapetext{action} is called {\em reduction}) by any \,$k \neq 0$:
+$$\frac{ka}{kb} = (kb)^{-1}(ka) = b^{-1}k^{-1}ka = b^{-1}a = \frac{a}{b}$$
+So we have the method for getting the quotient of complex numbers,
+       $$\frac{a}{b} = \frac{\bar{b}a}{\bar{b}b},$$
+where $\bar{b}$ is the complex conjugate of $b$, and the quotient of \PMlinkname{square root polynomials}{SquareRootOfSquareRootBinomial}, e.g.
+   $$\frac{1}{5+2\sqrt{2}} = \frac{5-2\sqrt{2}}{(5-2\sqrt{2})(5+2\sqrt{2})} = 
+\frac{5-2\sqrt{2}}{25-8} = \frac{5-2\sqrt{2}}{17};$$
+in the first case one aspires after a real and in the second case after a rational denominator.
+ \item The division is neither associative nor commutative, but it is right distributive over addition:
+         $$\frac{a+b}{c} = \frac{a}{c}+\frac{b}{c}$$
+\end{itemize}
+
+
+\end{document}

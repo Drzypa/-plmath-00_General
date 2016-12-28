@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VennDiagram}
+\pmcreated{2013-03-22 17:45:43}
+\pmmodified{2013-03-22 17:45:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Venn diagram}
+\pmrecord{16}{40215}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{00A06}
+\pmclassification{msc}{03E99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+%\usepackage{pst-plot}
+\usepackage{pstricks}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{mode}
+
+Note:  Currently, overlapping \PMlinkescapetext{colors} do not seem to be showing up properly in html mode.  Therefore, this entry is best viewed using page \PMlinkescapetext{images} mode.
+
+A \emph{Venn diagram} is a visual tool used in describing how two or more sets are logically related to one another.  The simplest example is a Venn diagram for two sets.  Each set is represented by a planar region bounded by a circle, so that the two regions overlap.  In the diagram below, set $A$ is represented by the reddish circular disc and set $B$ is represented by the bluish circular disc:
+
+\begin{center}
+\begin{pspicture}(0,0)(6,4)
+\pscircle[fillstyle=vlines,hatchcolor=red,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](2,2){2}
+\pscircle[fillstyle=vlines,hatchcolor=blue,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](4,2){2}
+\rput(1,2){$A$}
+\rput(3,2){$A\cap B$}
+\rput(5,2){$B$}
+\rput(0,0){$.$}
+\rput(6,4){$.$}
+\end{pspicture}
+\end{center}
+
+The overlapping region represents the intersection of the sets $A$ and $B$, denoted by $A\cap B$.
+
+Typically, the two sets are subsets of some bigger set $U$, called a universe.  Therefore, the corresponding Venn diagram above is shown to be sitting inside a larger rectangular region representing the universe:
+
+\begin{center}
+\begin{pspicture}(0,0)(8,6)
+\pspolygon(0,0)(8,0)(8,6)(0,6)
+\pscircle[fillstyle=vlines,hatchcolor=red,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](3,3){2}
+\pscircle[fillstyle=vlines,hatchcolor=blue,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](5,3){2}
+\rput(2,3){$2$}
+\rput(4,3){$1$}
+\rput(6,3){$3$}
+\rput(7,5){$4$}
+\rput(8.5,5.75){$U$}
+\rput(0,0){$.$}
+\rput(8,6){$.$}
+\end{pspicture}
+\end{center}
+
+Notice that the region representing the universe $U$ is partitioned into $4$ mutually exclusive regions:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Region & Set being represented & Symbol \\
+\hline\hline
+$1$ & the intersection of $A$ and $B$ & $A\cap B$ \\
+\hline
+$2$ & $A$ excluding $B$ & $A\cap B'$ \\
+\hline
+$3$ & $B$ excluding $A$ & $A'\cap B$ \\
+\hline
+$4$ & neither $A$ nor $B$ & $A'\cap B'$ \\
+\hline
+\end{tabular}
+\end{center}
+
+A Venn diagram for three sets is slightly more complicated, and is illustrated below:
+
+\begin{center}
+\begin{pspicture}(0,0)(8,7.75)
+\pspolygon(0,0)(8,0)(8,7.75)(0,7.75)
+\pscircle[fillstyle=vlines,hatchcolor=red,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](3,3){2}
+\pscircle[fillstyle=vlines,hatchcolor=blue,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](5,3){2}
+\pscircle[fillstyle=vlines,hatchcolor=yellow,hatchwidth=0.1\pslinewidth,hatchsep=1\pslinewidth](4,4.75){2}
+\rput(2,2.5){$1$}
+\rput(4,2){$2$}
+\rput(6,2.5){$3$}
+\rput(2.75,4){$4$}
+\rput(4,3.5){$5$}
+\rput(5.25,4){$6$}
+\rput(4,5.5){$7$}
+\rput(6.5,6.25){$8$}
+\rput(8.5,7.5){$U$}
+\rput(0,0){$.$}
+\rput(8,7.75){$.$}
+\end{pspicture}
+\end{center}
+
+As indicated by the diagram, $U$ is divided into $8$ regions.  The $8$ regions represent the following sets (where $A,B,C$ are sets represented by circular discs Red, Blue, Yellow, respectively):
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+Region & Set & Region & Set & Region & Set & Region & Set \\
+\hline\hline
+$1$ & $A\cap B'\cap C'$ & $2$ & $A\cap B\cap C'$ & $3$ & $A'\cap B\cap C'$ & $4$ & $A\cap B'\cap C$ \\
+\hline
+$5$ & $A\cap B\cap C$ & $6$ & $A'\cap B\cap C$ & $7$ & $A'\cap B'\cap C$ & $8$ & $A'\cap B'\cap C'$ \\
+\hline
+\end{tabular}
+\end{center}
+
+More generally, a Venn diagram may be constructed for any finite number of sets, and the regions representing the sets need not be circular discs, as long as each region is the interior of a simple closed curve (in the plane $\mathbb{R}^2$).  Specifically, a Venn diagram $V$ for $n$ sets is a set of $n$ simple closed curves $C_1,\ldots, C_n$ in $\mathbb{R}^2$ such that $$A_1(k_1)\cap \cdots \cap A_n(k_n) \ne \varnothing$$
+for every combination of $(k_1,\ldots,k_n)$, where each $k_i\in \lbrace 0,1\rbrace$, and that $A_i(0)$ is the region $A_i$ bounded by $C_i$, and $A_i(1)$ is $A_i'$, the complement of $A_i$ in $\mathbb{R}^2$.  In a nutshell, this says that the curves $C_1,\ldots,C_n$ partition $\mathbb{R}^2$ into $2^n$ non-empty regions.  This is in fact possible for every $n<\infty$.  Furthermore, if we treat a straight line as a circle whose center is located at $\infty$, the possibility of constructing a Venn diagram for $n$ sets is the same as saying the possibility of constructing $n$ straight lines in $\mathbb{R}^2$ such that the lines partition the plane into $2^n$ regions.
+
+\textbf{Remark}.  Note that given a Venn diagram for $n$ sets, no assumptions are made concerning these $n$ sets, although it is generally assumed that the logical structure of these sets correspond to the logical structure of the regions bounded by the closed curves in the Venn diagram.  For example, it is possible that $A\cap B=\varnothing$, or that $A\subseteq B$.  A Venn diagram for both examples would look the same, although $A\cap B$ represents $\varnothing$ in the former case, and $A$ in the latter one.
+%%%%%
+%%%%%
+\end{document}

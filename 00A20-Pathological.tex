@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pathological}
+\pmcreated{2013-03-22 14:41:56}
+\pmmodified{2013-03-22 14:41:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{pathological}
+\pmrecord{10}{36310}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+In mathematics, a \emph{pathological object} is mathematical
+object that has a highly unexpected \PMlinkescapetext{property}. 
+
+Pathological objects are typically percieved to, in some sense, be 
+badly behaving. On the other hand, they are perfectly properly
+defined mathematical objects. Therefore this ``bad behaviour'' can
+simply be seen as a contradiction with our intuitive 
+picture of how a certain object should behave. 
+
+\subsubsection*{Examples}
+\begin{itemize}
+\item A very famous pathological function is the 
+Weierstrass function, which is a continuous function 
+that is nowhere differentiable. 
+\item The Peano space filling curve. This pathological curve
+maps the unit interval $[0,1]$ continuously onto $[0,1]\times [0,1]$. 
+\item The Cantor set. This is subset of the interval $[0,1]$
+has the pathological property that it is uncountable 
+yet its measure is zero. 
+\item The Dirichlet's function from $\R$ to $\R$ is continuous at every
+irrational point and discontinuous at every rational point. 
+\item Ackermann Function.
+\end{itemize}
+
+See also \cite{wiki}. 
+
+\begin{thebibliography}{9}
+\bibitem{wiki}Wikipedia \PMlinkexternal{entry on pathological, mathematics}{http://en.wikipedia.org/wiki/Pathological (mathematics)}. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

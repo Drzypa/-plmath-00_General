@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Vacuous}
+\pmcreated{2013-03-22 14:42:27}
+\pmmodified{2013-03-22 14:42:27}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{vacuous}
+\pmrecord{9}{36326}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A20}
+\pmsynonym{vacuously}{Vacuous}
+\pmsynonym{vacuously true}{Vacuous}
+\pmsynonym{vacuous truth}{Vacuous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Suppose $X$ is a set and $P$ is a property defined as follows:
+\begin{eqnarray*}
+& &  \mbox{$X$ has property $P$ if and only if} \\
+& &  \mbox{$\forall Y[$ $Y$ satisfies condition $1] \Rightarrow$ $Y$ satisfies condition $2$ }
+\end{eqnarray*} 
+where condition $1$ and condition $2$ define the property. 
+If condition $1$ is never satisfied then $X$ satisfies property $P$
+\emph{vacuously}.
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item If $X$ is the set $\{1,2,3\}$ and $P$ is the property defined as above with condition $1=$ $Y$ is a infinite subset of $X$, and condition $2=$ $Y$ contains $7$.  Then $X$ has property $P$ vacously; every infinite subset of $\{1,2,3\}$ contains the number $7$ \cite{wiki}. 
+\item The empty set is a Hausdorff space (vacuously). 
+\item Suppose property $P$ is defined by the statement\,: \\
+\emph{The present King of France does not exist.}\\
+Then either of the following propositions is satisfied vacuously. \\
+\emph{The present king of France is bald.}\\
+\emph{The present King of France is not bald.} 
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{wiki}Wikipedia \PMlinkexternal{entry on Vacuous truth}{http://en.wikipedia.org/wiki/Vacuous_truth}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

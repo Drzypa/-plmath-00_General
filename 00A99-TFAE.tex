@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TFAE}
+\pmcreated{2013-03-22 12:44:40}
+\pmmodified{2013-03-22 12:44:40}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{TFAE}
+\pmrecord{4}{33048}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A99}
+\pmsynonym{the following are equivalent}{TFAE}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+The abbreviation ``TFAE'' is shorthand for ``\textbf{t}he \textbf{f}ollowing \textbf{a}re \textbf{e}quivalent''.  It is used before a set of equivalent conditions (each implies all the others).
+
+In a definition, when one of the conditions is somehow ``better'' (simpler, shorter, ...), it makes sense to phrase the definition with that condition, and mention that the others are equivalent.  ``TFAE'' is typically used when none of the conditions can take priority over the others.  Actually proving the claimed equivalence must, of course, be done separately.
+%%%%%
+%%%%%
+\end{document}

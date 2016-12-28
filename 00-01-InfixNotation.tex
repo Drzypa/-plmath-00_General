@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfixNotation}
+\pmcreated{2013-03-22 16:21:20}
+\pmmodified{2013-03-22 16:21:20}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{infix notation}
+\pmrecord{5}{38490}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00-01}
+\pmsynonym{infix}{InfixNotation}
+\pmrelated{GeneralAssociativity}
+\pmdefines{infix arithmetic}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic} 
+
+\begin{document}
+Infix notation is how we usually read and write arithmetic expressions.  In this notation, the operator goes between the operands in the expression:
+
+$$ \text{(operand1)} \text{(operator)} \text{(operand2)} $$
+
+E.g., $ 3 + 2 $, or $ 196 \times 11 $, etc. 
+
+Infix notation suffers from some ambiguity; e.g.
+
+$$ 3 + 9 \times 2 $$ 
+
+could mean $ ( 3 + 9) \times 2 $ or $ 3 + (9 \times 2) $.  Parentheses are needed to specify the order of operations unambiguously.
+
+Postfix notation (or reverse-Polish notation) does not suffer this ambiguity; but it is considered harder for humans to read (hence its primary use in computer applications).
+
+The ``usual'' fix for the ambiguity problem described above is to provide a convention regarding precedence of operations.  This is typically done for computer parsing of mathematical expressions rather than in math done by hand, because in the former case, the computer \emph{must} have some standard rules to proceed.  For example, it is typical to make multiplication ``higher precedence'' than addition, so in the above case, $9 \times 2$ would be performed before adding the result to 3. 
+
+The ambiguity problem only occurs when multiple operators are present in one expression, and thus, the associative law does not hold.  E.g., there is no ambiguity in $1 + 2 + 3$, because $(1 + 2) + 3$ is the same as $1 + (2 + 3)$, by the associative property of addition.
+
+%%%%%
+%%%%%
+\end{document}

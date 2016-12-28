@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Canonical}
+\pmcreated{2013-03-22 14:44:32}
+\pmmodified{2013-03-22 14:44:32}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{canonical}
+\pmrecord{6}{36379}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A20}
+\pmrelated{CanonicalFormOfElementOfNumberField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+A mathematical object is said to be \emph{canonical}
+if it arises in a natural way without introducing any additional objects. 
+
+\subsubsection*{Examples}
+\begin{enumerate}
+\item Suppose $A\times B$ is the Cartesian product of sets $A,B$. 
+Then $A\times B$ has two \PMlinkescapetext{canonical projections} 
+$A\times B\to A$
+and $A\times B\to B$ defined in a natural way. Of course, if
+we assume more structure of $A,B$ there are also other projections. 
+\item \PMlinkname{canonical projection}{CanonicalProjection} (in group theory)
+\end{enumerate}
+
+\subsubsection*{Notes}
+For a discussion of the theological use of canonical, see \cite{wiki}. 
+
+\begin{thebibliography}{9}
+\bibitem{wiki} Wikipedia, article on \PMlinkexternal{canonical}{http://en.wikipedia.org/wiki/Canonical}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TechniquesInMathematicalProofs}
+\pmcreated{2013-03-22 14:46:15}
+\pmmodified{2013-03-22 14:46:15}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{techniques in mathematical proofs}
+\pmrecord{18}{36415}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A35}
+\pmclassification{msc}{03F07}
+\pmrelated{IrrationalToAnIrrationalPowerCanBeRational}
+\pmrelated{ExistentialTheorem}
+\pmrelated{IABIsInvertibleIfAndOnlyIfIBAIsInvertible}
+\pmdefines{existential proof}
+\pmdefines{existence proof}
+\pmdefines{constructive proof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+\begin{document}
+\PMlinkescapeword{qed}
+\PMlinkescapeword{right}
+\PMlinkescapeword{terms}
+
+The following example (from ring theory) illustrates the one aspect of proofs in mathematics: proving the existence of certain mathematical \PMlinkescapetext{objects or properties}.
+\par
+\textbf{Statement:} Let $R$ be a ring such that $1-ab$ is right invertible, with $a,b\in R$.  Then $1-ba$ is right invertible.
+\par
+This statement will be proven here using two methods.  The first method is called an \emph{existential proof} (also known as an \emph{existence proof}), in which one only seeks to prove that the mathematical \PMlinkescapetext{object or property} in question exists, \emph{not} to show how to obtain it.  The second method is called a \emph{constructive proof}, in which one actually shows how to obtain the mathematical \PMlinkescapetext{object or property} in question.
+\par
+\textbf{Existential proof:}
+Since $1-ab\in R$ is right invertible, $(1-ab)R=R$.  Now, $$(1-ba)R\supseteq(1-ba)bR=b(1-ab)R=bR.$$  So $$(ba)R=b(aR)\subseteq bR\subseteq\ (1-ba)R,$$ and consequently, $$R=(1-ba)R+(ba)R\subseteq (1-ba)R,$$ showing that $1\in(1-ba)R$.  \qed
+\par
+Notice, we merely demonstrated the existence of a right inverse of $1-ba$ without actually finding such an \PMlinkescapetext{inverse}.  The next proof in fact finds a right inverse of $1-ba$.
+\par
+\textbf{Constructive proof:}
+Since $1-ab\in R$ is right invertible, let $c\in R$ be a right inverse so that $1=(1-ab)c$.  We seek to construct a right inverse of $1-ba$ in terms of $a,b,$ and $c$.  Rewriting the equation, we have $abc=c-1$.  Then, $$(1-ba)bc=bc-babc=bc-b(c-1)=b.$$  We have just expressed $b$ in terms of $1-ba$.  Next, multiply $a$ on the right to each term on both sides of the equation, to get $$ba=(1-ba)bca.$$  Then, negate both terms and add 1, to get 
+$$1-ba=1-(1-ba)bca.$$  Finally, rearranging the terms and we have $$1=(1-ba)+(1-ba)bca=(1-ba)(1+bca),$$ showing that 
+a right inverse of $1-ba$ exists by explicitly constructing one.  \qed\\
+\par
+Many other techniques are used in proving mathematical statements.  Proof by mathematical induction, proof by contradiction, proof by contrapositive, and proof by exhaustion are just some of the major techniques (a \PMlinkescapetext{simple example of the last type} is in the entry ``irrational to an irrational power can be rational'').
+\par
+As this entry is still in its very rough form, PM users are welcome and encouraged to refine and provide additional techniques with interesting and illustrative examples!
+%%%%%
+%%%%%
+\end{document}

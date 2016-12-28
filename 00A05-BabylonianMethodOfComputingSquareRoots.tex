@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BabylonianMethodOfComputingSquareRoots}
+\pmcreated{2013-03-22 15:16:45}
+\pmmodified{2013-03-22 15:16:45}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Babylonian method of computing square roots}
+\pmrecord{9}{37068}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{01A17}
+\pmrelated{BombellisMethodOfComputingSquareRoots}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\section{Description}
+
+To compute the square root of a number which lies between 0 and 2, one may use a method of successive approximations which involves only the operations of squaring and averaging.  The basis of method is the binomial identity:
+ \[ (x+y)^2 = x^2 + 2xy + y^2 \]
+
+Write the number whose square root is to be computed as $1 - x$.  Write the square root of the number as $1 - y$. By definition, one has
+ \[ (1 - y)^2 = 1 - x \]
+Using the binomial identity,
+ \[ 1 - 2 y + y^2 = 1 - x .\]
+Cancelling,
+ \[ - 2 y + y^2 = -x .\]
+Moving terms from one side to the other,
+ \[ 2 y = x + y^2 \]
+Dividing by 2,
+ \[ y = \frac{1}{2} (x + y^2) .\]
+
+Even though $y$ appears alone on one side of the equation, we cannot use it directly to obtain $y$ because $y$ also appears on the other side.  However, if $y$ lies between $-1$ and $+1$, then $y^2$ is smaller than $y$ and $y^2 /2$ is even smaller.  So, as a first approximation, the occurrence of $y$ on the right hand side can be ignored.  One then obtains a second approximation to $y$ as $x/2$.  To obtain a third approximation to $y$, one can substitute the second approximation into the right hand side.  One can continue this process of substituting the preceding approximation into the right hand side and computing the next approximation forever.  In symbols, this procedure may be described as follows:
+ \[ y_1 = 0 \]
+ \[ y_{n+1} = \frac{1}{2} (x + y_n^2) \]
+As we shall see, this procedure converges to the correct value of $y$ in the limit as $n \to \infty$.
+
+\section{Examples}
+
+To illustrate this, consider $\sqrt{1/2}$.  Since $1/2 = 1 - 1/2$, it is the case that $x = 1/2$ so the recursion is as follows:
+ \[ y_{n+1} = \frac{1}{2} (\frac{1}{2} + y_n^2) = \frac{1}{4} + \frac{1}{2} y_n^2 \]
+The first few approximations look as follows:
+ \[ y_1 = 0 \]
+ \[ y_1 = 0.25 \]
+ \[ y_2 = 0.28125 \]
+ \[ y_3 = 0.28955 \]
+ \[ y_4 = 0.29192 \]
+ \[ y_5 = 0.29261 \]
+ \[ y_6 = 0.29281 \]
+ \[ y_7 = 0.29287 \]
+ \[ y_8 = 0.29289 \]
+Hence, the eighth approximation for $\sqrt{1/2}$ is $0.70711$.  Squaring this, we see that it agrees with $0.5$ to five decimal places.  To be sure, the Babylonians would have written their numbers is base 60 rather than base 10 as we do, yet the calculation of $\sqrt{1/2}$ given above is substantially the same as was carried out centuries ago by ancient scholars on clay tablets.
+
+As it shall be seen, this method requires that the number whose square root is to be computed lie between 0 and 2 in order to converge.  However, with a few simple hacks, it is possible to use it to compute the square roots of numbers which lie outside of this range.  One possibility is to compute the square root of the reciprocal of the number.  For example, one can take the reciprocal of the result obtained above to obtain 1.41421 as a value for $\sqrt{2}$.
+
+However, this is not so good a strategy for computing the square roots of large numbers --- the reciprocal of a large number is a small number, and will turn out that the method takes a long time to converge.  A better strategy is to divide the number in question by a perfect square to obtain a number in the suitable range.  
+
+How this works can be illustrated by computing $\sqrt{10}$.  The perfect sqare $9 = 3^2$ is close to $10$.  So, instead of computing $\sqrt{10}$, consider $\sqrt{10/9}$.  Once this has been computed, one can multiply by $3$ to obtain the answer because $3 \sqrt{10/9} = \sqrt{9} \sqrt{10/9} = \sqrt{10}$.  In this case, $x = -1/9$, the recursion looks like
+ \[ y_{n+1} = -\frac{1}{18} + \frac{1}{2} y_n^2 \]
+and the approximations go as follows:
+ \[ y_1 = 0 \]
+ \[ y_2 = -0.05556 \]
+ \[ y_3 = -0.05401 \]
+ \[ y_4 = -0.05410 \]
+ \[ y_5 = -0.05409 \]
+Subtracting from 1 and multiplying by 3, one obtains 3.16227 as a value for $\sqrt{10}$, which is good to 5 decimal places.
+
+\section{Convergence}
+
+Having shown that how this method works, it is now time to make sure that it really does work.  As a first step, it will be shown that, if $x$ lies between $-2$ and $+1$, then all approximations $y_n$ lie between $-1$ and $+1$ as well.  By definition $y_0$ lies in the required range, since it is defined to be 0.  Suppose that $y_n$ lies in the range.  Then, by definition,
+ \[ y_{n+1} = \frac{1}{2} (x + y_n) .\]
+Since both $x$ and $y_n$ lie between $-1$ and $+1$, it follows that their average must lie in the same range.
+
+To show convergence, the recursion will subtracted from a shifted version of itself like so:
+ \[ y_{n+2} = \frac{1}{2} (x + y_{n+1}^2) \]
+ \[ y_{n+1} = \frac{1}{2} (x + y_n^2) \]
+ \[ y_{n+2} - y_{n+1} = \frac{1}{2} (y_{n+1}^2 - y_n^2) \]
+The right hand side, being a difference of squares, may be factored.
+ \[ y_{n+2} - y_{n+1} = \frac{1}{2} (y_{n+1} + y_n) (y_{n+1} - y_n) \]
+For ease of explanation, define the quantity $z_n = y_{n+1} - y_n$.  In terms of this entity, the above equation may be written as
+ \[ z_{n+1} = \frac{1}{2} (y_{n+1} + y_n) z_n \]
+
+The proof will now proceed differently for the cases of $x$ positive and $x$ negative. (The in-between case $x=0$ is trivial.)  If $x$ is positive, then it readily follows from the recursion that   $y_n$ is positive for all $n$.  Hence, $\frac{1}{2} (y_{n+1} + y_n)$ is also positive for all $n$.  Now, $z_2 = x/2$, so $z_2$ is positive.  Since the product of two positive quantities is positive, it follows by induction that $z_n$ is positive for all $n$.  By definition, this means that $y_{n+1} > y_n$ for all $n$.  Since we know that $y_n$ is less that $1$ for all $n$ and bounded increasing sequences converge, it follows that the sequence is convergent.
+
+If $x$ is negative, then it can be shown that $y_n$ lies between $x/2$ and $0$ for all $n$.  This is trivially true for $y_1$.  Assume that it is true for a particular value of $n$.  Then $y_n^2$ is positive and smaller than $-x$.  Hence, $x + y_n^2$ lies between $x$ and $0$, so $(x + y_n^2)/2$, which equals $y_{n+1}$, lies between $x/2$ and $0$.
+
+Consequently, $(y_{n+1} + y_n)/2$ will lie between $x/2$ and $0$.  By the recursion for $z_n$, one therefore has
+ \[ |z_{n+1}| \le \left| \frac{x}{2} \right| \, |z_n| \]
+from which it follows that
+ \[ |z_n| \le \left| \frac{x}{2} \right|^n |z_1| \]
+By definition of $z_n$, one has
+ \[ | y_m - y_n | = \left| \sum_{j=n+1}^m z_j \right| \le \sum_{j=n+1}^m |z_j| \le \sum_{j=n+1}^m \left| \frac{x}{2} \right|^n |z_1| = \frac{(|x|/2)^m - (|x|/2|)^n}{1 - |x|/2} \, |z_0| .\]
+If $x$ lies between $-2$ and $0$, then $|x|/2$ is smaller than $1$ in absolute value, so it follows from Cauchy's criterion that the sequence converges.
+
+It is not enough that the sequence converges; it must converge to the right value.  This, however, is easily checked.  Take the limit of both sides of the recursion:
+ \[ \lim_{n \to \infty} y_{n+1} = \lim_{n \to \infty} \frac{1}{2} (x + y_n^2) \]
+Defining $y = \lim_{n \to \infty} y_n$, it follows that
+ \[ y = \frac{1}{2} (x + y^2) .\]
+Reading the algebraic argument at the beginning of this entry backwards, one sees that $1 - y$ is indeed the square root of $1 - x$ as it is supposed to be.
+%%%%%
+%%%%%
+\end{document}

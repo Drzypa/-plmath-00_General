@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ToyTheorem}
+\pmcreated{2013-03-22 13:55:35}
+\pmmodified{2013-03-22 13:55:35}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{toy theorem}
+\pmrecord{7}{34684}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{00-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+A \emph{toy theorem} is a simplified version of a more general theorem.
+For instance, by introducing some simplifying assumptions in a theorem,
+one obtains a toy theorem.
+
+Usually, a toy theorem is used to illustrate the claim of a theorem. 
+It can also be illustrative and insightful to study proofs of
+a toy theorem derived from a non-trivial theorem. 
+Toy theorems also have a great education value. 
+After presenting a theorem (with, say, a highly non-trivial proof),
+one can sometimes give some assurance that the theorem
+really holds, by proving a toy version of the theorem. 
+
+For instance, a toy theorem of the Brouwer fixed point theorem
+is obtained by restricting the dimension to one.
+In this case, the Brouwer fixed point theorem follows
+almost immediately from the intermediate value theorem
+(see \PMlinkname{this page}{BrouwerFixedPointInOneDimension}).
+%%%%%
+%%%%%
+\end{document}
