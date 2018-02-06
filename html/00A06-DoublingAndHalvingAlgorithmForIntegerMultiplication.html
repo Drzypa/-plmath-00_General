@@ -1,7 +1,7 @@
 <!DOCTYPE html><html>
 <head>
-<title>References</title>
-<!--Generated on Tue Feb  6 22:03:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<title>doubling and halving algorithm for integer multiplication</title>
+<!--Generated on Tue Feb  6 22:19:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -13,8 +13,181 @@
 <body>
 <div class="ltx_page_main">
 <div class="ltx_page_content">
-<article class="ltx_document">
-<div id="p1" class="ltx_para ltx_align_right">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">doubling and halving algorithm for integer multiplication</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Because multiplying and dividing by 2 is often easier for humans than multiplying and dividing by other numbers there is an algorithm for multiplication of any two integers that takes advantage of multiplication and division by 2.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Call the algorithm with two integers.</p>
+</div>
+<div id="p3" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Use one of the integers to start a column on the left and the other to start a column on the right. (Either number can be put in either column, there are very minor optimizations that are unlikely to make a difference in performance, such as not choosing for the left column numbers that end long Cunningham chains).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Divide the previous integer on the left column by 2 and write the yield below it, ignoring any fractional part there may be. Multiply the previous integer on the right column by 2 and write the product below.
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Repeat Step 2 until the yield on the left column is 1.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For every even number on the left column, cross out the right column’s number of the same row.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Add up the the numbers on the right column that haven’t been crossed out.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">For example, to multiply 108 by 255:</p>
+</div>
+<div id="p5" class="ltx_para">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">108</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p5.m1" class="ltx_Math" alttext="\not{255}" display="inline"><menclose notation="updiagonalstrike"><mn>255</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">54</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p5.m2" class="ltx_Math" alttext="\not{510}" display="inline"><menclose notation="updiagonalstrike"><mn>510</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">27</td>
+<td class="ltx_td ltx_align_right ltx_border_r">1020</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">13</td>
+<td class="ltx_td ltx_align_right ltx_border_r">2040</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">6</td>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p5.m3" class="ltx_Math" alttext="\not{4080}" display="inline"><menclose notation="updiagonalstrike"><mn>4080</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">3</td>
+<td class="ltx_td ltx_align_right ltx_border_r">8160</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">1</td>
+<td class="ltx_td ltx_align_right ltx_border_r">16320</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">27540</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This works in any base (as long as one doesn’t get confused about parity in odd bases). For example, 18 times 24 in base 5:</p>
+</div>
+<div id="p7" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">33</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p7.m1" class="ltx_Math" alttext="\not{44}" display="inline"><menclose notation="updiagonalstrike"><mn>44</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">14</th>
+<td class="ltx_td ltx_align_right ltx_border_r">143</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">4</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p7.m2" class="ltx_Math" alttext="\not{341}" display="inline"><menclose notation="updiagonalstrike"><mn>341</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">2</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p7.m3" class="ltx_Math" alttext="\not{1232}" display="inline"><menclose notation="updiagonalstrike"><mn>1232</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1</th>
+<td class="ltx_td ltx_align_right ltx_border_r">3014</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">3212</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Naturally one might wonder if this can be applied to binary and used by computers. After all, halving and ignoring the fractional part is even easier: it’s just a matter of shifting the bits to the right, and it doesn’t matter what the computer does with the discarded bit (as long as it doesn’t put it back into the original byte or word in the most significant bit or the sign bit). Doubling is also easy, just a shift left, with the only concern being overflow.</p>
+</div>
+<div id="p9" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1010</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p9.m1" class="ltx_Math" alttext="\not{111}" display="inline"><menclose notation="updiagonalstrike"><mn>111</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">101</th>
+<td class="ltx_td ltx_align_right ltx_border_r">1110</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">10</th>
+<td class="ltx_td ltx_align_right ltx_border_r"><math id="p9.m2" class="ltx_Math" alttext="\not{11100}" display="inline"><menclose notation="updiagonalstrike"><mn>11100</mn></menclose></math></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1</th>
+<td class="ltx_td ltx_align_right ltx_border_r">111000</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_border_l ltx_border_r"></td>
+<td class="ltx_td ltx_align_right ltx_border_r">1000110</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Of course this algorithm is not suitable for large integer multiplication as is required in the search for large prime numbers.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> Paul Erdős &amp; János Surányi <span class="ltx_text ltx_font_italic">Topics in the theory of numbers</span> New York: Springer (2003): 5
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> Ogilvy &amp; Anderson, <span class="ltx_text ltx_font_italic">Excursions in Number Theory</span>. Oxford: Oxford University Press (1966). Reprinted New York: Dover (1988): 6 - 8
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p11" class="ltx_para ltx_align_right">
 <table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
@@ -68,181 +241,10 @@
 </tbody>
 </table>
 </div>
-<div id="p2" class="ltx_para">
-<br class="ltx_break">
-<p class="ltx_p">Because multiplying and dividing by 2 is often easier for humans than multiplying and dividing by other numbers there is an algorithm for multiplication of any two integers that takes advantage of multiplication and division by 2.</p>
-</div>
-<div id="p3" class="ltx_para">
-<p class="ltx_p">Call the algorithm with two integers.</p>
-</div>
-<div id="p4" class="ltx_para">
-<ol id="I1" class="ltx_enumerate">
-<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_enumerate">1.</span> 
-<div id="I1.i1.p1" class="ltx_para">
-<p class="ltx_p">Use one of the integers to start a column on the left and the other to start a column on the right. (Either number can be put in either column, there are very minor optimizations that are unlikely to make a difference in performance, such as not choosing for the left column numbers that end long Cunningham chains).</p>
-</div>
-</li>
-<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_enumerate">2.</span> 
-<div id="I1.i2.p1" class="ltx_para">
-<p class="ltx_p">Divide the previous integer on the left column by 2 and write the yield below it, ignoring any fractional part there may be. Multiply the previous integer on the right column by 2 and write the product below.
-</p>
-</div>
-</li>
-<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_enumerate">3.</span> 
-<div id="I1.i3.p1" class="ltx_para">
-<p class="ltx_p">Repeat Step 2 until the yield on the left column is 1.</p>
-</div>
-</li>
-<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_enumerate">4.</span> 
-<div id="I1.i4.p1" class="ltx_para">
-<p class="ltx_p">For every even number on the left column, cross out the right column’s number of the same row.</p>
-</div>
-</li>
-<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_enumerate">5.</span> 
-<div id="I1.i5.p1" class="ltx_para">
-<p class="ltx_p">Add up the the numbers on the right column that haven’t been crossed out.</p>
-</div>
-</li>
-</ol>
-</div>
-<div id="p5" class="ltx_para">
-<p class="ltx_p">For example, to multiply 108 by 255:</p>
-</div>
-<div id="p6" class="ltx_para">
-<table class="ltx_tabular ltx_align_middle">
-<tbody class="ltx_tbody">
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">108</td>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p6.m1" class="ltx_Math" alttext="\not{255}" display="inline"><menclose notation="updiagonalstrike"><mn>255</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">54</td>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p6.m2" class="ltx_Math" alttext="\not{510}" display="inline"><menclose notation="updiagonalstrike"><mn>510</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">27</td>
-<td class="ltx_td ltx_align_right ltx_border_r">1020</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">13</td>
-<td class="ltx_td ltx_align_right ltx_border_r">2040</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">6</td>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p6.m3" class="ltx_Math" alttext="\not{4080}" display="inline"><menclose notation="updiagonalstrike"><mn>4080</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">3</td>
-<td class="ltx_td ltx_align_right ltx_border_r">8160</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_align_right ltx_border_l ltx_border_r">1</td>
-<td class="ltx_td ltx_align_right ltx_border_r">16320</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_border_l ltx_border_r"></td>
-<td class="ltx_td ltx_align_right ltx_border_r">27540</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="p7" class="ltx_para">
-<p class="ltx_p">This works in any base (as long as one doesn’t get confused about parity in odd bases). For example, 18 times 24 in base 5:</p>
-</div>
-<div id="p8" class="ltx_para">
-<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
-<tbody class="ltx_tbody">
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">33</th>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p8.m1" class="ltx_Math" alttext="\not{44}" display="inline"><menclose notation="updiagonalstrike"><mn>44</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">14</th>
-<td class="ltx_td ltx_align_right ltx_border_r">143</td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">4</th>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p8.m2" class="ltx_Math" alttext="\not{341}" display="inline"><menclose notation="updiagonalstrike"><mn>341</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">2</th>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p8.m3" class="ltx_Math" alttext="\not{1232}" display="inline"><menclose notation="updiagonalstrike"><mn>1232</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1</th>
-<td class="ltx_td ltx_align_right ltx_border_r">3014</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_border_l ltx_border_r"></td>
-<td class="ltx_td ltx_align_right ltx_border_r">3212</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="p9" class="ltx_para">
-<p class="ltx_p">Naturally one might wonder if this can be applied to binary and used by computers. After all, halving and ignoring the fractional part is even easier: it’s just a matter of shifting the bits to the right, and it doesn’t matter what the computer does with the discarded bit (as long as it doesn’t put it back into the original byte or word in the most significant bit or the sign bit). Doubling is also easy, just a shift left, with the only concern being overflow.</p>
-</div>
-<div id="p10" class="ltx_para">
-<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
-<tbody class="ltx_tbody">
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1010</th>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p10.m1" class="ltx_Math" alttext="\not{111}" display="inline"><menclose notation="updiagonalstrike"><mn>111</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">101</th>
-<td class="ltx_td ltx_align_right ltx_border_r">1110</td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">10</th>
-<td class="ltx_td ltx_align_right ltx_border_r"><math id="p10.m2" class="ltx_Math" alttext="\not{11100}" display="inline"><menclose notation="updiagonalstrike"><mn>11100</mn></menclose></math></td>
-</tr>
-<tr class="ltx_tr">
-<th class="ltx_td ltx_align_right ltx_th ltx_th_row ltx_border_l ltx_border_r">1</th>
-<td class="ltx_td ltx_align_right ltx_border_r">111000</td>
-</tr>
-<tr class="ltx_tr">
-<td class="ltx_td ltx_border_l ltx_border_r"></td>
-<td class="ltx_td ltx_align_right ltx_border_r">1000110</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="p11" class="ltx_para">
-<p class="ltx_p">Of course this algorithm is not suitable for large integer multiplication as is required in the search for large prime numbers.</p>
-</div>
-<section id="bib" class="ltx_bibliography">
-<h2 class="ltx_title ltx_title_bibliography">References</h2>
-
-<ul class="ltx_biblist">
-      
-<li id="bib.bib1" class="ltx_bibitem">
-        <span class="ltx_bibtag ltx_role_refnum">1</span>
-        
-<span class="ltx_bibblock"> Paul Erdős &amp; János Surányi <span class="ltx_text ltx_font_italic">Topics in the theory of numbers</span> New York: Springer (2003): 5
-
-</span>
-      </li>
-      
-<li id="bib.bib2" class="ltx_bibitem">
-        <span class="ltx_bibtag ltx_role_refnum">2</span>
-        
-<span class="ltx_bibblock"> Ogilvy &amp; Anderson, <span class="ltx_text ltx_font_italic">Excursions in Number Theory</span>. Oxford: Oxford University Press (1966). Reprinted New York: Dover (1988): 6 - 8
-
-</span>
-      </li>
-    
-</ul>
-</section>
 </article>
 </div>
 <footer class="ltx_page_footer">
-<div class="ltx_page_logo">Generated  on Tue Feb  6 22:03:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Tue Feb  6 22:19:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>

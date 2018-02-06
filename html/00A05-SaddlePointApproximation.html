@@ -1,7 +1,7 @@
 <!DOCTYPE html><html>
 <head>
-<title>Untitled Document</title>
-<!--Generated on Tue Feb  6 22:03:13 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<title>saddle point approximation</title>
+<!--Generated on Tue Feb  6 22:18:39 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="LaTeXML.css" type="text/css">
@@ -13,9 +13,84 @@
 <body>
 <div class="ltx_page_main">
 <div class="ltx_page_content">
-<article class="ltx_document">
-<div id="p1" class="ltx_para ltx_align_right">
-<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">saddle point approximation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The saddle point approximation (SPA), a.k.a. stationary phase approximation, is a widely used method in quantum field theory (QFT) and related fields.
+Suppose we want to evaluate the following integral in the limit <math id="p1.m1" class="ltx_Math" alttext="\zeta\rightarrow\infty" display="inline"><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>:</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="{\mathcal{I}}=\lim_{\zeta\rightarrow\infty}\int_{-\infty}^{\infty}{\mbox{d}}x%
+\;{\mbox{e}}^{-\zeta f(x)}." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The saddle point approximation can be applied if the function <math id="p1.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies certain conditions. Assume that <math id="p1.m3" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a global minimum <math id="p1.m4" class="ltx_Math" alttext="f(x_{0})=y_{min}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>y</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></math> at <math id="p1.m5" class="ltx_Math" alttext="x=x_{0}" display="inline"><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>, which is sufficiently separated from other local minima and whose value is sufficiently smaller than the value of those.
+Consider the Taylor expansion of <math id="p1.m6" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> about the point <math id="p1.m7" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>:
+</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="f(x)=f(x_{0})+\partial_{x}f(x){\Big{|}}_{x=x_{0}}(x-x_{0})+\frac{1}{2}{%
+\partial_{x}}^{2}f(x){\Big{|}}_{x=x_{0}}(x-x_{0})^{2}+O(x^{3})." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mrow><mrow><msub><mo>∂</mo><mi>x</mi></msub><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mmultiscripts><mo>∂</mo><mi>x</mi><none></none><none></none><mn>2</mn></mmultiscripts><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p1.m8" class="ltx_Math" alttext="f(x_{0})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> is a (global) minimum, it is clear that <math id="p1.m9" class="ltx_Math" alttext="f^{\prime}(x_{0})=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Therefore <math id="p1.m10" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> may be approximated to quadratic order as</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="f(x)\approx f(x_{0})+\frac{1}{2}f^{\prime\prime}(x_{0})(x-x_{0})^{2}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The above assumptions on the minima of <math id="p1.m11" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> ensure that the dominant contribution to (<a href="#S0.E1" title="(1) ‣ saddle point approximation" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in the limit <math id="p1.m12" class="ltx_Math" alttext="\zeta\rightarrow\infty" display="inline"><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> will
+come from the region of integration around <math id="p1.m13" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle{\mathcal{I}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m2" class="ltx_Math" alttext="\displaystyle\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
+\int_{-\infty}^{\infty}{\mbox{d}}x\;{\mbox{e}}^{-\frac{\zeta}{2}f^{\prime%
+\prime}(x_{0})(x-x_{0})^{2}}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mfrac><mi>ζ</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
+\left(\frac{2\pi}{\zeta f^{\prime\prime}(x_{0})}\right)^{1/2}." display="inline"><mrow><mrow><mi></mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mrow><mi>ζ</mi><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In the last step we have performed the Gaußian integral.
+The next nonvanishing higher order correction to (<a href="#S0.E4" title="(4) ‣ saddle point approximation" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) stems from the quartic term of the expansion (<a href="#S0.E2" title="(2) ‣ saddle point approximation" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). This correction may be incorporated into (<a href="#S0.E4" title="(4) ‣ saddle point approximation" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) to yield (after expanding part of the exponential):</p>
+<table id="S0.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="{\mathcal{I}}\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
+\int_{-\infty}^{\infty}{\mbox{d}}x\;{\mbox{e}}^{-\frac{\zeta}{2}f^{\prime%
+\prime}(x_{0})(x-x_{0})^{2}}\left(1-\frac{\zeta}{4!}(\partial_{x}^{4}f(x))|_{x%
+=x_{0}}(x-x_{0})^{4}\right)." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mfrac><mi>ζ</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msub><mrow><mrow><mfrac><mi>ζ</mi><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msubsup><mo>∂</mo><mi>x</mi><mn>4</mn></msubsup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<p class="ltx_p">…to be continued with applications to physics…
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
@@ -68,85 +143,10 @@
 </tbody>
 </table>
 </div>
-<div id="p2" class="ltx_para">
-<br class="ltx_break">
-<p class="ltx_p">The saddle point approximation (SPA), a.k.a. stationary phase approximation, is a widely used method in quantum field theory (QFT) and related fields.
-Suppose we want to evaluate the following integral in the limit <math id="p2.m1" class="ltx_Math" alttext="\zeta\rightarrow\infty" display="inline"><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>:</p>
-<table id="S0.E1" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="{\mathcal{I}}=\lim_{\zeta\rightarrow\infty}\int_{-\infty}^{\infty}{\mbox{d}}x%
-\;{\mbox{e}}^{-\zeta f(x)}." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
-</tr>
-</table>
-<p class="ltx_p">The saddle point approximation can be applied if the function <math id="p2.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies certain conditions. Assume that <math id="p2.m3" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a global minimum <math id="p2.m4" class="ltx_Math" alttext="f(x_{0})=y_{min}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>y</mi><mrow><mi>m</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></math> at <math id="p2.m5" class="ltx_Math" alttext="x=x_{0}" display="inline"><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>, which is sufficiently separated from other local minima and whose value is sufficiently smaller than the value of those.
-Consider the Taylor expansion of <math id="p2.m6" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> about the point <math id="p2.m7" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>:
-</p>
-<table id="S0.E2" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="f(x)=f(x_{0})+\partial_{x}f(x){\Big{|}}_{x=x_{0}}(x-x_{0})+\frac{1}{2}{%
-\partial_{x}}^{2}f(x){\Big{|}}_{x=x_{0}}(x-x_{0})^{2}+O(x^{3})." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mrow><mrow><msub><mo>∂</mo><mi>x</mi></msub><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mmultiscripts><mo>∂</mo><mi>x</mi><none></none><none></none><mn>2</mn></mmultiscripts><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" maxsize="160%" minsize="160%">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
-</tr>
-</table>
-<p class="ltx_p">Since <math id="p2.m8" class="ltx_Math" alttext="f(x_{0})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> is a (global) minimum, it is clear that <math id="p2.m9" class="ltx_Math" alttext="f^{\prime}(x_{0})=0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Therefore <math id="p2.m10" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> may be approximated to quadratic order as</p>
-<table id="S0.E3" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="f(x)\approx f(x_{0})+\frac{1}{2}f^{\prime\prime}(x_{0})(x-x_{0})^{2}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
-</tr>
-</table>
-<p class="ltx_p">The above assumptions on the minima of <math id="p2.m11" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> ensure that the dominant contribution to (<a href="#S0.E1" title="(1)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) in the limit <math id="p2.m12" class="ltx_Math" alttext="\zeta\rightarrow\infty" display="inline"><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> will
-come from the region of integration around <math id="p2.m13" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>:</p>
-<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
-
-<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle{\mathcal{I}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℐ</mi></math></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m2" class="ltx_Math" alttext="\displaystyle\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
-\int_{-\infty}^{\infty}{\mbox{d}}x\;{\mbox{e}}^{-\frac{\zeta}{2}f^{\prime%
-\prime}(x_{0})(x-x_{0})^{2}}" display="inline"><mrow><mi></mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mfrac><mi>ζ</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></mrow></mrow></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
-</tr></tbody>
-<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
-<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
-\left(\frac{2\pi}{\zeta f^{\prime\prime}(x_{0})}\right)^{1/2}." display="inline"><mrow><mrow><mi></mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mrow><mi>ζ</mi><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-</tr>
-</table>
-<p class="ltx_p">In the last step we have performed the Gaußian integral.
-The next nonvanishing higher order correction to (<a href="#S0.E4" title="(4)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) stems from the quartic term of the expansion (<a href="#S0.E2" title="(2)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>). This correction may be incorporated into (<a href="#S0.E4" title="(4)" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) to yield (after expanding part of the exponential):</p>
-<table id="S0.E5" class="ltx_equation ltx_eqn_table">
-
-<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
-<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
-<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E5.m1" class="ltx_Math" alttext="{\mathcal{I}}\approx\lim_{\zeta\rightarrow\infty}{\mbox{e}}^{-\zeta f(x_{0})}%
-\int_{-\infty}^{\infty}{\mbox{d}}x\;{\mbox{e}}^{-\frac{\zeta}{2}f^{\prime%
-\prime}(x_{0})(x-x_{0})^{2}}\left(1-\frac{\zeta}{4!}(\partial_{x}^{4}f(x))|_{x%
-=x_{0}}(x-x_{0})^{4}\right)." display="block"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℐ</mi><mo>≈</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mtext>d</mtext><mo>⁢</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><msup><mtext>e</mtext><mrow><mo>-</mo><mrow><mfrac><mi>ζ</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>f</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msub><mrow><mrow><mfrac><mi>ζ</mi><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msubsup><mo>∂</mo><mi>x</mi><mn>4</mn></msubsup><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>4</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
-<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
-<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
-</tr>
-</table>
-<p class="ltx_p">…to be continued with applications to physics…
-</p>
-</div>
 </article>
 </div>
 <footer class="ltx_page_footer">
-<div class="ltx_page_logo">Generated  on Tue Feb  6 22:03:13 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Tue Feb  6 22:18:39 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>
