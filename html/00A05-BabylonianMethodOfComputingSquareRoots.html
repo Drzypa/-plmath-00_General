@@ -1,0 +1,437 @@
+<!DOCTYPE html><html>
+<head>
+<title>1 Description</title>
+<!--Generated on Tue Feb  6 22:02:14 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document">
+<div id="p1" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Babylonian method of computing square roots</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BabylonianMethodOfComputingSquareRoots</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algorithm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 00A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 01A17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BombellisMethodOfComputingSquareRoots</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Description</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">To compute the square root of a number which lies between 0 and 2, one may use a method of successive approximations which involves only the operations of squaring and averaging. The basis of method is the binomial identity:</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="(x+y)^{2}=x^{2}+2xy+y^{2}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Write the number whose square root is to be computed as <math id="S1.p2.m1" class="ltx_Math" alttext="1-x" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></math>. Write the square root of the number as <math id="S1.p2.m2" class="ltx_Math" alttext="1-y" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>y</mi></mrow></math>. By definition, one has</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="(1-y)^{2}=1-x" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the binomial identity,
+</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="1-2y+y^{2}=1-x." display="block"><mrow><mrow><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Cancelling,</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="-2y+y^{2}=-x." display="block"><mrow><mrow><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mo>-</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Moving terms from one side to the other,</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="2y=x+y^{2}" display="block"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing by 2,</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="y=\frac{1}{2}(x+y^{2})." display="block"><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Even though <math id="S1.p3.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> appears alone on one side of the equation, we cannot use it directly to obtain <math id="S1.p3.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> because <math id="S1.p3.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> also appears on the other side. However, if <math id="S1.p3.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> lies between <math id="S1.p3.m5" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> and <math id="S1.p3.m6" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>, then <math id="S1.p3.m7" class="ltx_Math" alttext="y^{2}" display="inline"><msup><mi>y</mi><mn>2</mn></msup></math> is smaller than <math id="S1.p3.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="S1.p3.m9" class="ltx_Math" alttext="y^{2}/2" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow></math> is even smaller. So, as a first approximation, the occurrence of <math id="S1.p3.m10" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> on the right hand side can be ignored. One then obtains a second approximation to <math id="S1.p3.m11" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> as <math id="S1.p3.m12" class="ltx_Math" alttext="x/2" display="inline"><mrow><mi>x</mi><mo>/</mo><mn>2</mn></mrow></math>. To obtain a third approximation to <math id="S1.p3.m13" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, one can substitute the second approximation into the right hand side. One can continue this process of substituting the preceding approximation into the right hand side and computing the next approximation forever. In symbols, this procedure may be described as follows:</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="y_{1}=0" display="block"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="y_{n+1}=\frac{1}{2}(x+y_{n}^{2})" display="block"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As we shall see, this procedure converges to the correct value of <math id="S1.p3.m14" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in the limit as <math id="S1.p3.m15" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">To illustrate this, consider <math id="S2.p1.m1" class="ltx_Math" alttext="\sqrt{1/2}" display="inline"><msqrt><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msqrt></math>. Since <math id="S2.p1.m2" class="ltx_Math" alttext="1/2=1-1/2" display="inline"><mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mrow></math>, it is the case that <math id="S2.p1.m3" class="ltx_Math" alttext="x=1/2" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></math> so the recursion is as follows:</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="y_{n+1}=\frac{1}{2}(\frac{1}{2}+y_{n}^{2})=\frac{1}{4}+\frac{1}{2}y_{n}^{2}" display="block"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The first few approximations look as follows:</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="y_{1}=0" display="block"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="y_{1}=0.25" display="block"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mn>0.25</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="y_{2}=0.28125" display="block"><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mn>0.28125</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="y_{3}=0.28955" display="block"><mrow><msub><mi>y</mi><mn>3</mn></msub><mo>=</mo><mn>0.28955</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="y_{4}=0.29192" display="block"><mrow><msub><mi>y</mi><mn>4</mn></msub><mo>=</mo><mn>0.29192</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="y_{5}=0.29261" display="block"><mrow><msub><mi>y</mi><mn>5</mn></msub><mo>=</mo><mn>0.29261</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="y_{6}=0.29281" display="block"><mrow><msub><mi>y</mi><mn>6</mn></msub><mo>=</mo><mn>0.29281</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="y_{7}=0.29287" display="block"><mrow><msub><mi>y</mi><mn>7</mn></msub><mo>=</mo><mn>0.29287</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="y_{8}=0.29289" display="block"><mrow><msub><mi>y</mi><mn>8</mn></msub><mo>=</mo><mn>0.29289</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, the eighth approximation for <math id="S2.p1.m4" class="ltx_Math" alttext="\sqrt{1/2}" display="inline"><msqrt><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msqrt></math> is <math id="S2.p1.m5" class="ltx_Math" alttext="0.70711" display="inline"><mn>0.70711</mn></math>. Squaring this, we see that it agrees with <math id="S2.p1.m6" class="ltx_Math" alttext="0.5" display="inline"><mn>0.5</mn></math> to five decimal places. To be sure, the Babylonians would have written their numbers is base 60 rather than base 10 as we do, yet the calculation of <math id="S2.p1.m7" class="ltx_Math" alttext="\sqrt{1/2}" display="inline"><msqrt><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msqrt></math> given above is substantially the same as was carried out centuries ago by ancient scholars on clay tablets.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">As it shall be seen, this method requires that the number whose square root is to be computed lie between 0 and 2 in order to converge. However, with a few simple hacks, it is possible to use it to compute the square roots of numbers which lie outside of this range. One possibility is to compute the square root of the reciprocal of the number. For example, one can take the reciprocal of the result obtained above to obtain 1.41421 as a value for <math id="S2.p2.m1" class="ltx_Math" alttext="\sqrt{2}" display="inline"><msqrt><mn>2</mn></msqrt></math>.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">However, this is not so good a strategy for computing the square roots of large numbers — the reciprocal of a large number is a small number, and will turn out that the method takes a long time to converge. A better strategy is to divide the number in question by a perfect square to obtain a number in the suitable range.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">How this works can be illustrated by computing <math id="S2.p4.m1" class="ltx_Math" alttext="\sqrt{10}" display="inline"><msqrt><mn>10</mn></msqrt></math>. The perfect sqare <math id="S2.p4.m2" class="ltx_Math" alttext="9=3^{2}" display="inline"><mrow><mn>9</mn><mo>=</mo><msup><mn>3</mn><mn>2</mn></msup></mrow></math> is close to <math id="S2.p4.m3" class="ltx_Math" alttext="10" display="inline"><mn>10</mn></math>. So, instead of computing <math id="S2.p4.m4" class="ltx_Math" alttext="\sqrt{10}" display="inline"><msqrt><mn>10</mn></msqrt></math>, consider <math id="S2.p4.m5" class="ltx_Math" alttext="\sqrt{10/9}" display="inline"><msqrt><mrow><mn>10</mn><mo>/</mo><mn>9</mn></mrow></msqrt></math>. Once this has been computed, one can multiply by <math id="S2.p4.m6" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math> to obtain the answer because <math id="S2.p4.m7" class="ltx_Math" alttext="3\sqrt{10/9}=\sqrt{9}\sqrt{10/9}=\sqrt{10}" display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><msqrt><mrow><mn>10</mn><mo>/</mo><mn>9</mn></mrow></msqrt></mrow><mo>=</mo><mrow><msqrt><mn>9</mn></msqrt><mo>⁢</mo><msqrt><mrow><mn>10</mn><mo>/</mo><mn>9</mn></mrow></msqrt></mrow><mo>=</mo><msqrt><mn>10</mn></msqrt></mrow></math>. In this case, <math id="S2.p4.m8" class="ltx_Math" alttext="x=-1/9" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>-</mo><mrow><mn>1</mn><mo>/</mo><mn>9</mn></mrow></mrow></mrow></math>, the recursion looks like</p>
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="y_{n+1}=-\frac{1}{18}+\frac{1}{2}y_{n}^{2}" display="block"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>18</mn></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the approximations go as follows:</p>
+<table id="S2.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex20.m1" class="ltx_Math" alttext="y_{1}=0" display="block"><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex21.m1" class="ltx_Math" alttext="y_{2}=-0.05556" display="block"><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>0.05556</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex22.m1" class="ltx_Math" alttext="y_{3}=-0.05401" display="block"><mrow><msub><mi>y</mi><mn>3</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>0.05401</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex23.m1" class="ltx_Math" alttext="y_{4}=-0.05410" display="block"><mrow><msub><mi>y</mi><mn>4</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>0.05410</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S2.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex24.m1" class="ltx_Math" alttext="y_{5}=-0.05409" display="block"><mrow><msub><mi>y</mi><mn>5</mn></msub><mo>=</mo><mrow><mo>-</mo><mn>0.05409</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Subtracting from 1 and multiplying by 3, one obtains 3.16227 as a value for <math id="S2.p4.m9" class="ltx_Math" alttext="\sqrt{10}" display="inline"><msqrt><mn>10</mn></msqrt></math>, which is good to 5 decimal places.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Convergence</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Having shown that how this method works, it is now time to make sure that it really does work. As a first step, it will be shown that, if <math id="S3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> lies between <math id="S3.p1.m2" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math> and <math id="S3.p1.m3" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>, then all approximations <math id="S3.p1.m4" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> lie between <math id="S3.p1.m5" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> and <math id="S3.p1.m6" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math> as well. By definition <math id="S3.p1.m7" class="ltx_Math" alttext="y_{0}" display="inline"><msub><mi>y</mi><mn>0</mn></msub></math> lies in the required range, since it is defined to be 0. Suppose that <math id="S3.p1.m8" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> lies in the range. Then, by definition,</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="y_{n+1}=\frac{1}{2}(x+y_{n})." display="block"><mrow><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since both <math id="S3.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.p1.m10" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> lie between <math id="S3.p1.m11" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> and <math id="S3.p1.m12" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>, it follows that their average must lie in the same range.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">To show convergence, the recursion will subtracted from a shifted version of itself like so:
+</p>
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex26.m1" class="ltx_Math" alttext="y_{n+2}=\frac{1}{2}(x+y_{n+1}^{2})" display="block"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="y_{n+1}=\frac{1}{2}(x+y_{n}^{2})" display="block"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="y_{n+2}-y_{n+1}=\frac{1}{2}(y_{n+1}^{2}-y_{n}^{2})" display="block"><mrow><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>-</mo><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></msubsup><mo>-</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The right hand side, being a difference of squares, may be factored.</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="y_{n+2}-y_{n+1}=\frac{1}{2}(y_{n+1}+y_{n})(y_{n+1}-y_{n})" display="block"><mrow><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>-</mo><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For ease of explanation, define the quantity <math id="S3.p2.m1" class="ltx_Math" alttext="z_{n}=y_{n+1}-y_{n}" display="inline"><mrow><msub><mi>z</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></mrow></math>. In terms of this entity, the above equation may be written as</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="z_{n+1}=\frac{1}{2}(y_{n+1}+y_{n})z_{n}" display="block"><mrow><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>z</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">The proof will now proceed differently for the cases of <math id="S3.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> positive and <math id="S3.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> negative. (The in-between case <math id="S3.p3.m3" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> is trivial.) If <math id="S3.p3.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is positive, then it readily follows from the recursion that <math id="S3.p3.m5" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> is positive for all <math id="S3.p3.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Hence, <math id="S3.p3.m7" class="ltx_Math" alttext="\frac{1}{2}(y_{n+1}+y_{n})" display="inline"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is also positive for all <math id="S3.p3.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Now, <math id="S3.p3.m9" class="ltx_Math" alttext="z_{2}=x/2" display="inline"><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>x</mi><mo>/</mo><mn>2</mn></mrow></mrow></math>, so <math id="S3.p3.m10" class="ltx_Math" alttext="z_{2}" display="inline"><msub><mi>z</mi><mn>2</mn></msub></math> is positive. Since the product of two positive quantities is positive, it follows by induction that <math id="S3.p3.m11" class="ltx_Math" alttext="z_{n}" display="inline"><msub><mi>z</mi><mi>n</mi></msub></math> is positive for all <math id="S3.p3.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. By definition, this means that <math id="S3.p3.m13" class="ltx_Math" alttext="y_{n+1}&gt;y_{n}" display="inline"><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&gt;</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></math> for all <math id="S3.p3.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Since we know that <math id="S3.p3.m15" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> is less that <math id="S3.p3.m16" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> for all <math id="S3.p3.m17" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and bounded increasing sequences converge, it follows that the sequence is convergent.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p4.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is negative, then it can be shown that <math id="S3.p4.m2" class="ltx_Math" alttext="y_{n}" display="inline"><msub><mi>y</mi><mi>n</mi></msub></math> lies between <math id="S3.p4.m3" class="ltx_Math" alttext="x/2" display="inline"><mrow><mi>x</mi><mo>/</mo><mn>2</mn></mrow></math> and <math id="S3.p4.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> for all <math id="S3.p4.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. This is trivially true for <math id="S3.p4.m6" class="ltx_Math" alttext="y_{1}" display="inline"><msub><mi>y</mi><mn>1</mn></msub></math>. Assume that it is true for a particular value of <math id="S3.p4.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. Then <math id="S3.p4.m8" class="ltx_Math" alttext="y_{n}^{2}" display="inline"><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></math> is positive and smaller than <math id="S3.p4.m9" class="ltx_Math" alttext="-x" display="inline"><mrow><mo>-</mo><mi>x</mi></mrow></math>. Hence, <math id="S3.p4.m10" class="ltx_Math" alttext="x+y_{n}^{2}" display="inline"><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow></math> lies between <math id="S3.p4.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S3.p4.m12" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, so <math id="S3.p4.m13" class="ltx_Math" alttext="(x+y_{n}^{2})/2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></math>, which equals <math id="S3.p4.m14" class="ltx_Math" alttext="y_{n+1}" display="inline"><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></math>, lies between <math id="S3.p4.m15" class="ltx_Math" alttext="x/2" display="inline"><mrow><mi>x</mi><mo>/</mo><mn>2</mn></mrow></math> and <math id="S3.p4.m16" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Consequently, <math id="S3.p5.m1" class="ltx_Math" alttext="(y_{n+1}+y_{n})/2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>2</mn></mrow></math> will lie between <math id="S3.p5.m2" class="ltx_Math" alttext="x/2" display="inline"><mrow><mi>x</mi><mo>/</mo><mn>2</mn></mrow></math> and <math id="S3.p5.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. By the recursion for <math id="S3.p5.m4" class="ltx_Math" alttext="z_{n}" display="inline"><msub><mi>z</mi><mi>n</mi></msub></math>, one therefore has</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="|z_{n+1}|\leq\left|\frac{x}{2}\right|\,|z_{n}|" display="block"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mo>|</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo rspace="4.2pt">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which it follows that</p>
+<table id="S3.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex32.m1" class="ltx_Math" alttext="|z_{n}|\leq\left|\frac{x}{2}\right|^{n}|z_{1}|" display="block"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msup><mrow><mo>|</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>|</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By definition of <math id="S3.p5.m5" class="ltx_Math" alttext="z_{n}" display="inline"><msub><mi>z</mi><mi>n</mi></msub></math>, one has</p>
+<table id="S3.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex33.m1" class="ltx_Math" alttext="|y_{m}-y_{n}|=\left|\sum_{j=n+1}^{m}z_{j}\right|\leq\sum_{j=n+1}^{m}|z_{j}|%
+\leq\sum_{j=n+1}^{m}\left|\frac{x}{2}\right|^{n}|z_{1}|=\frac{(|x|/2)^{m}-(|x|%
+/2|)^{n}}{1-|x|/2}\,|z_{0}|." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>m</mi></msub><mo>-</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>|</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>m</mi></munderover><msub><mi>z</mi><mi>j</mi></msub></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>m</mi></munderover><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></mrow><mi>m</mi></munderover><mrow><msup><mrow><mo>|</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>|</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><msup><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo><mo>/</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>-</mo><msup><mrow><mo stretchy="false">(</mo><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo><mo>/</mo><mn>2</mn><mo stretchy="false">|</mo><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>/</mo><mn>2</mn></mrow></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo stretchy="false">|</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S3.p5.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> lies between <math id="S3.p5.m7" class="ltx_Math" alttext="-2" display="inline"><mrow><mo>-</mo><mn>2</mn></mrow></math> and <math id="S3.p5.m8" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, then <math id="S3.p5.m9" class="ltx_Math" alttext="|x|/2" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>/</mo><mn>2</mn></mrow></math> is smaller than <math id="S3.p5.m10" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> in absolute value, so it follows from Cauchy’s criterion that the sequence converges.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">It is not enough that the sequence converges; it must converge to the right value. This, however, is easily checked. Take the limit of both sides of the recursion:</p>
+<table id="S3.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex34.m1" class="ltx_Math" alttext="\lim_{n\to\infty}y_{n+1}=\lim_{n\to\infty}\frac{1}{2}(x+y_{n}^{2})" display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Defining <math id="S3.p6.m1" class="ltx_Math" alttext="y=\lim_{n\to\infty}y_{n}" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></mrow></math>, it follows that</p>
+<table id="S3.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex35.m1" class="ltx_Math" alttext="y=\frac{1}{2}(x+y^{2})." display="block"><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Reading the algebraic argument at the beginning of this entry backwards, one sees that <math id="S3.p6.m2" class="ltx_Math" alttext="1-y" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>y</mi></mrow></math> is indeed the square root of <math id="S3.p6.m3" class="ltx_Math" alttext="1-x" display="inline"><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></math> as it is supposed to be.
+</p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Tue Feb  6 22:02:14 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
