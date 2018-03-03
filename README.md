@@ -1,5 +1,7 @@
 # 00_General
 
+[![Join the chat at https://gitter.im/planetmath/00_General](https://badges.gitter.im/planetmath/00_General.svg)](https://gitter.im/planetmath/00_General?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 - 00-XX: General
  - 00-01: Instructional exposition (textbooks, tutorial papers, etc.)
  - 00-02: Research exposition (monographs, survey articles)
