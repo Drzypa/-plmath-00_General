@@ -18,7 +18,7 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">Infix notation is how we usually read and write arithmetic expressions. In this notation, the operator goes between the operands in the expression:</p>
+<p class="ltx_p"><a class="nnexus_concept" href="http://planetmath.org/infixnotation">Infix notation</a> is how we usually read and write <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">arithmetic</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/arithmetic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/arithmeticalhierarchy"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> <a class="nnexus_concept" href="http://planetmath.org/expression">expressions</a>. In this notation, the <a class="nnexus_concept" href="http://planetmath.org/operator">operator</a> goes between the operands in the expression:</p>
 </div>
 <div id="p2" class="ltx_para">
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
@@ -49,13 +49,13 @@
 </table>
 </div>
 <div id="p6" class="ltx_para">
-<p class="ltx_p">could mean <math id="p6.m1" class="ltx_Math" alttext="(3+9)\times 2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>+</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mn>2</mn></mrow></math> or <math id="p6.m2" class="ltx_Math" alttext="3+(9\times 2)" display="inline"><mrow><mn>3</mn><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>9</mn><mo>×</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Parentheses are needed to specify the order of operations unambiguously.</p>
+<p class="ltx_p">could mean <math id="p6.m1" class="ltx_Math" alttext="(3+9)\times 2" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>+</mo><mn>9</mn></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mn>2</mn></mrow></math> or <math id="p6.m2" class="ltx_Math" alttext="3+(9\times 2)" display="inline"><mrow><mn>3</mn><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>9</mn><mo>×</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Parentheses are needed to specify the <a class="nnexus_concept" href="http://planetmath.org/orderofoperations">order of operations</a> unambiguously.</p>
 </div>
 <div id="p7" class="ltx_para">
-<p class="ltx_p">Postfix notation (or reverse-Polish notation) does not suffer this ambiguity; but it is considered harder for humans to read (hence its primary use in computer applications).</p>
+<p class="ltx_p"><a class="nnexus_concept" href="http://planetmath.org/reversepolishnotation">Postfix notation</a> (or reverse-Polish notation) does not suffer this ambiguity; but it is considered harder for humans to read (hence its primary use in <a class="nnexus_concept" href="http://planetmath.org/supercomputers">computer</a> applications).</p>
 </div>
 <div id="p8" class="ltx_para">
-<p class="ltx_p">The “usual” fix for the ambiguity problem described above is to provide a convention regarding precedence of operations. This is typically done for computer parsing of mathematical expressions rather than in math done by hand, because in the former case, the computer <em class="ltx_emph ltx_font_italic">must</em> have some standard rules to proceed. For example, it is typical to make multiplication “higher precedence” than addition, so in the above case, <math id="p8.m1" class="ltx_Math" alttext="9\times 2" display="inline"><mrow><mn>9</mn><mo>×</mo><mn>2</mn></mrow></math> would be performed before adding the result to 3.</p>
+<p class="ltx_p">The “usual” fix for the ambiguity problem described above is to provide a convention regarding precedence of operations. This is typically done for computer parsing of mathematical expressions rather than in math done by hand, because in the former case, the computer <em class="ltx_emph ltx_font_italic">must</em> have some standard rules to proceed. For example, it is typical to make <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiplication</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/multiplication"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/cardinalarithmetic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> “higher precedence” than <a class="nnexus_concept" href="http://planetmath.org/addition">addition</a>, so in the above case, <math id="p8.m1" class="ltx_Math" alttext="9\times 2" display="inline"><mrow><mn>9</mn><mo>×</mo><mn>2</mn></mrow></math> would be performed before adding the result to 3.</p>
 </div>
 <div id="p9" class="ltx_para">
 <p class="ltx_p">The ambiguity problem only occurs when multiple operators are present in one expression, and thus, the associative law does not hold. E.g., there is no ambiguity in <math id="p9.m1" class="ltx_Math" alttext="1+2+3" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn></mrow></math>, because <math id="p9.m2" class="ltx_Math" alttext="(1+2)+3" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mn>3</mn></mrow></math> is the same as <math id="p9.m3" class="ltx_Math" alttext="1+(2+3)" display="inline"><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, by the associative property of addition.</p>
@@ -68,7 +68,7 @@
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">infix notation</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">InfixNotation</td>
 </tr>
 <tr class="ltx_tr">
@@ -97,7 +97,7 @@
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
-<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concept" href="http://planetmath.org/definition">Definition</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
